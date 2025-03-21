@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="height: 3000px;">
+    <!--Fixed places the element in the browser; it doesnt move when you scroll.Whiles absolute places the element on the page, it moves when you scroll-->
+    <!--z-index is used to arrange the element; it determines which element comes first ;-->
+
+    <!--Absolute in relative-->
+    <div class="box" style="background-color: grey;position: relative;width: 100px;height: 100px;">
+        <div style="position:absolute;top:1px;left:-5px;top:-5px;">
+            <img class="closebutton" src="images/closedbutton.png" style="height: 20px;border-radius: 10px;">
+        </div>
+
+    </div>
+
+
+
+    <div style="position: relative;display: inline-block;">
+        <img src="images/clothingline.jpg">
+
+        <div style="background-color: black;color: white;display: inline-block;top:0;right:0;position:absolute;">
+            <p style="text-wrap:2px;">20% OFF</p>
+
+        </div>
+
+        <div
+            style="background-color: rgb(211, 214, 216);position: absolute; z-index:5;left: 0;display: inline-flex;bottom: 0px;box-shadow:(0,0,0,0.5) ;">
+            <h1>hello everyone</h1>
+
+        </div>
+
+
+
+    </div>
+
+
+
+
+
+
+</body>
+
+</html>

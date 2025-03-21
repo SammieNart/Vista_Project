@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outward Remittance</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css">
+    <style>
+        body {
+
+            background-color: #f7d5d3;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-sm navbar-light bg-danger">
+        <a href="#" class="navbar-brand mb-0 h1">
+            <img src="..\images\vista-logo.png" class="logo-top1" width="50" height="50">
+            <span class="navbar-brand mb-0 h1"><b>Vista Bank</b></span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a href="#" class="nav-link active"><b>Search</b></a>
+                </li>
+
+                <li class="nav-item ">
+                    <a href="#" class="nav-link"><b>Contact IT</b></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <div class=".container-fluid sm">
+        <form action="" method="post" onsubmit="alert('Transaction has been submitted!');">
+            <div class="row g-3">
+                <h2 class="mb-4">Outward Remittance</h2>
+
+                <ul class="nav nav-tabs" id="horizontalTabs" role="tablist">
+
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="tab-outwardremittance" data-bs-toggle="tab"
+                            data-bs-target="#content-outwardremittance" type="button" role="tab"
+                            aria-controls="tab-outwardremittance" aria-selected="true">Outwardremittance</button>
+                    </li>
+
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="tab-mt103" data-bs-toggle="tab" data-bs-target="#content-mt103"
+                            type="button" role="tab" aria-controls="tab-mt103" aria-selected="true">MT103</button>
+                    </li>
+
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="tab-commission" data-bs-toggle="tab"
+                            data-bs-target="#content-commission" type="button" role="tab" aria-controls="tab-commission"
+                            aria-selected="false">Charges</button>
+                    </li>
+
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="tab-audit" data-bs-toggle="tab" data-bs-target="#content-audit"
+                            type="button" role="tab" aria-controls="tab-audit" aria-selected="false">Audit</button>
+                    </li>
+                </ul>
+
+                <div class="tab-content">
+                    <div class="tab-pane fade show active" id="content-outwardremittance" role="tabpanel"
+                        aria-labelledby="tab-outwardremittance">
+                        <div class="row ">
+
+
+                            <div class="mb-3 row">
+                                <label class="col-sm-5 col-form-label">Debit Account</label>
+                                <div class="col-sm-3">
+                                    <select class="form-select" name="DEBIT.ACCT.NO">
+                                        <option>001</option>
+                                        <option>002</option>
+                                        <option>003</option>
+                                    </select>
+                                </div>
+                            </div>
+
+
+                            <div class="mb-3 row">
+                                <label class="col-sm-5 col-form-label">Debit Value Date</label>
+                                <div class="col-sm-3 ">
+                                    <input type="date" class="form-control" name="DEBIT.VALUE.DATE">
+                                </div>
+                            </div>
+
+
+                            <div class="mb-3 row">
+                                <label class="col-sm-5 col-form-label">Debit Currency</label>
+                                <div class="col-sm-3">
+                                    <input type="text" class="form-control" name="DEBIT.CURRENCY">
+                                </div>
+                            </div>
+
+
+                            <div class="mb-3 row">
+                                <label class="col-sm-5 col-form-label">Debit Amount</label>
+                                <div class="col-sm-3">
+                                    <input type="text" class="form-control" name="DEBIT.AMOUNT">
+                                </div>
+                            </div>
+
+                            <!-- Value Date -->
+                            <div class="mb-3 row">
+                                <label class="col-sm-5 col-form-label">Ordering Customer.1</label>
+                                <div class="col-sm-3">
+                                    <input type="text" class="form-control" name="ORDERING.CUST">
+                                </div>
+                            </div>
+
+
+                            <div class="mb-3 row">
+                                <label class="col-sm-5 col-form-label">Beneficiary Id</label>
+                                <div class="col-sm-3 ">
+                                    <input type="text" class="form-control" name="BENEFICIARY.ID">
+                                </div>
+                            </div>
+
+
+                            <div class="mb-3 row">
+                                <label class="col-sm-5 col-form-label">Beneficiary Account No.</label>
+                                <div class="col-sm-3 ">
+                                    <input type="text" class="form-control" name="BEN.ACCT.NO">
+                                </div>
+                            </div>
+
+                            <div class="mb-3 row">
+                                <label class="col-sm-5 col-form-label">IBAN - Benef Account No.</label>
+                                <div class="col-sm-3 ">
+                                    <input type="text" class="form-control" name="IBAN.BEN">
+                                </div>
+                            </div>
+
+
+                            <div class="mb-3 row">
+                                <label class="col-sm-5 col-form-label">Beneficiary BIC/Bank Name</label>
+                                <div class="col-sm-3">
+                                    <input type="text" class="form-control" name="BIC.IBAN.BEN">
+                                </div>
+                            </div>
+
+                            <!-- IBAN-Ord -->
+                            <div class="mb-3 row">
+                                <label class="col-sm-5 col-form-label">Beneficiary.1</label>
+                                <div class="col-sm-3">
+                                    <input type="text" class="form-control" name="BEN.CUSTOMER">
+                                </div>
+                            </div>
+
+                            <!-- Ordering Institution -->
+                            <div class="mb-3 row">
+                                <label class="col-sm-5 col-form-label">Beneficiary Name.1</label>
+                                <div class="col-sm-3">
+                                    <input type="text" class="form-control" name="BEN.NAME">
+                                </div>
+                            </div>
+
+                            <!-- Intermediary Institution -->
+                            <div class="mb-3 row">
+                                <label class="col-sm-5 col-form-label">Beneficiary Address.1</label>
+                                <div class="col-sm-3">
+                                    <input type="text" class="form-control" name="BEN.ADDRESS">
+                                </div>
+                            </div>
+
+
+                            <div class="mb-3 row">
+                                <label class="col-sm-5 col-form-label">Beneficiary Country.1</label>
+                                <div class="col-sm-3">
+                                    <input type="text" class="form-control" name="BEN.COUNTRY">
+                                </div>
+                            </div>
+
+                            <div class="mb-3 row">
+                                <label class="col-sm-5 col-form-label">Beneficiary Town.1</label>
+                                <div class="col-sm-3">
+                                    <input type="text" class="form-control" name="BEN.TOWN">
+                                </div>
+                            </div>
+
+                            <div class="mb-3 row">
+                                <label class="col-sm-5 col-form-label">Credit Currency</label>
+                                <div class="col-sm-3">
+                                    <select class="form-select" name="CREDIT.CURRENCY">
+                                        <option>EUR Euro</option>
+                                        <option>GBP Pound Sterling</option>
+                                        <option>GMD Dalasi</option>
+                                        <option>GNF Guinean Franc</option>
+                                        <option>SLL LEONE (SIERRA LEONE)</option>
+                                        <option>USD US Dollar</option>
+                                        <option>XAF Cfa Francs Beac (Central Africa)</option>
+                                        <option>XAG SILVER in Ounces</option>
+                                        <option>XAU Gold in Ounces</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="mb-3 row">
+                                <label class="col-sm-5 col-form-label">Credit Amount</label>
+                                <div class="col-sm-3">
+                                    <input type="text" class="form-control" name="CREDIT.AMOUNT">
+                                </div>
+                            </div>
+
+                            <div class="mb-3 row">
+                                <label class="col-sm-5 col-form-label">Credit Account</label>
+                                <div class="col-sm-3">
+                                    <select class="form-select" name="CREDIT.ACCT.NO">
+                                        <option>001</option>
+                                        <option>002</option>
+                                        <option>003</option>
+                                    </select>
+                                </div>
+                            </div>
+
+
+                            <div class="mb-3 row">
+                                <label class="col-sm-5 col-form-label">Credit Value Date</label>
+                                <div class="col-sm-3">
+                                    <input type="date" class="form-control" name="benecus">
+                                </div>
+                            </div>
+
+
+                            <div class="mb-3 row">
+                                <label class="col-sm-5 col-form-label">Treasury Rate</label>
+                                <div class="col-sm-3">
+                                    <input type="text" class="form-control" name="TREASURY.RATE">
+                                </div>
+                            </div>
+
+
+                            <div class="mb-3 row">
+                                <label class="col-sm-5 col-form-label">Customer Spread</label>
+                                <div class="col-sm-3">
+                                    <input type="text" class="form-control" name="CUSTOMER.SPREAD">
+                                </div>
+                            </div>
+
+
+                            <div class="mb-3 row">
+                                <label class="col-sm-5 col-form-label">Customer Rate</label>
+                                <div class="col-sm-3">
+                                    <input type="text" class="form-control" name="CUSTOMER.RATE">
+                                </div>
+                            </div>
+
+                            <div class="mb-3 row">
+                                <label class="col-sm-5 col-form-label">Rounding Type</label>
+                                <div class="col-sm-3">
+                                    <select class="form-select" name="ROUND.TYPE">
+                                        <option>NATURAL Natural Rounding 1</option>
+                                        <option>NONE No Rounding NONE</option>
+                                        <option>ROUNDDOWN Rounding Down 2</option>
+                                        <option>ROUNDUP Rounding Up 3</option>
+                                        <option>TAX.DOWN TAX.DOWN TO DECIMAL PLACES 2</option>
+                                        <option>TAX.UP TAX.UP TO DECIMAL PLACES 3</option>
+                                    </select>
+                                </div>
+                            </div>
+
+
+                            <div class="mb-3 row">
+                                <label class="col-sm-2 col-form-label">Rate Fix Ind</label>
+                                <div class="col-sm-10">
+                                    <div class="form-check  form-check-inline" name="RATE.FIXING.IND">
+                                        <input class="form-check-input" type="radio" id="commission-none" value="none">
+                                        <label class="form-check-label" for="commission-none">None</label>
+                                    </div>
+                                    <div class="form-check  form-check-inline" name="RATE.FIXING.IND">
+                                        <input class="form-check-input" type="radio" id="" value="credit-less-charges"
+                                            name="commissioncredit">
+                                        <label class="form-check-label " for="commission-credit">No</label>
+                                    </div>
+                                    <div class="form-check  form-check-inline" name="RATE.FIXING.IND">
+                                        <input class="form-check-input" type="radio" id="" name="commissiondebit"
+                                            value="debit-plus-charges">
+                                        <label class="form-check-label" for="commissiondebit">Yes</label>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="mb-3 row">
+                                <label class="col-sm-5 col-form-label">Signatory.1</label>
+                                <div class="col-sm-3">
+                                    <select class="form-select" name="SIGNATORY">
+                                        <option>AAAA</option>
+                                        <option>BBBB</option>
+                                        <option>CCCC</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="mb-3 row">
+                                <label class="col-sm-5 col-form-label">Profit Centre Cust</label>
+                                <div class="col-sm-3">
+                                    <select class="form-select" name="PROFIT.CENTRE.CUST">
+                                        <option></option>
+                                        <option></option>
+                                        <option></option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="mb-3 row">
+                                <label class="col-sm-5 col-form-label">Profit Centre Dept</label>
+                                <div class="col-sm-3">
+                                    <select class="form-select" name="PROFIT.CENTRE.DEPT">
+                                        <option></option>
+                                        <option></option>
+                                        <option></option>
+                                    </select>
+                                </div>
+                            </div>
+
+
+                            <div class="mb-3 row">
+                                <label class="col-sm-5 col-form-label">Snap Inputter</label>
+                                <div class="col-sm-3">
+                                    <input type="text" class="form-control" name="SNAP.INP">
+                                </div>
+                            </div>
+
+
+                            <div class="mb-3 row">
+                                <label class="col-sm-5 col-form-label">Snap Authourizer</label>
+                                <div class="col-sm-3">
+                                    <input type="text" class="form-control" name="SNAP.AUTH">
+                                </div>
+                            </div>
+
+                            <div class="mb-3 row">
+                                <label class="col-sm-5 col-form-label">Snap ID</label>
+                                <div class="col-sm-3">
+                                    <input type="text" class="form-control" name="SNAP.ID">
+                                </div>
+                            </div>
+
+
+
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <div class="tab-content">
+
+                    <div class="tab-pane fade show active" id="content-mt103" role="tabpanel"
+                        aria-labelledby="tab-mt103">
+                        <div class="row ">
+                            <!-- Sender's Reference -->
+                            <div class="mb-3 row">
+                                <label class="col-sm-5 col-form-label">Sender's Reference (Tag 20):</label>
+                                <div class="col-sm-3">
+                                    <input type="text" class="form-control"
+                                        placeholder="Auto populated with Transaction ID" readonly>
+                                </div>
+                            </div>
+
+                            <!-- Time Indication -->
+                            <div class="mb-3 row">
+                                <label class="col-sm-5 col-form-label">Time Indication (Tag 13C):</label>
+                                <div class="col-sm-3 ">
+                                    <input type="text" class="form-control" name="TIME.IND">
+                                </div>
+                            </div>
+
+                            <!-- Bank Operation Code -->
+                            <div class="mb-3 row">
+                                <label class="col-sm-5 col-form-label">Bank Operation Code (Tag 23B):</label>
+                                <div class="col-sm-3">
+                                    <select class="form-select" name="BK.OPERATION.CODE">
+                                        <option>Chqb</option>
+                                        <option>Cred</option>
+                                        <option>Credit</option>
+                                        <option>Crts</option>
+                                        <option>Spay</option>
+                                        <option>Spri</option>
+                                        <option>Sstd</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Instruction Code -->
+                            <div class="mb-3 row">
+                                <label class="col-sm-5 col-form-label">Instruction Code (Tag 23E):</label>
+                                <div class="col-sm-3">
+                                    <input type="text" class="form-control" name="INSTRCTN.CODE">
+                                </div>
+                            </div>
+
+                            <!-- Value Date -->
+                            <div class="mb-3 row">
+                                <label class="col-sm-5 col-form-label">Value Date (Tag 32A):</label>
+                                <div class="col-sm-3">
+                                    <input type="date" class="form-control" name="CREDIT.VALUE.DATE">
+
+                                </div>
+                            </div>
+
+                            <!-- Currency -->
+                            <div class="mb-3 row">
+                                <label class="col-sm-5 col-form-label">Currency (Tag 32A):</label>
+                                <div class="col-sm-3 ">
+                                    <select>
+                                        <option>EUR Euro</option>
+                                        <option>GBP Pound Sterling</option>
+                                        <option>GMD Dalasi</option>
+                                        <option>GNF Guinean Franc</option>
+                                        <option>SLL LEONE (SIERRA LEONE)</option>
+                                        <option>USD US Dollar</option>
+                                        <option>XAF Cfa Francs Beac(Central Africa)</option>
+                                        <option>XAG SILVER in Ounces</option>
+                                        <option>XAU Gold in Ounces</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Ordering Customer -->
+                            <div class="mb-3 row">
+                                <label class="col-sm-5 col-form-label">Ordering Customer (Tag 50).1:</label>
+                                <div class="col-sm-3 ">
+                                    <input type="text" class="form-control" name="ORDERING.CUST">
+                                </div>
+                            </div>
+
+
+                            <!-- Ordering Customer Code -->
+                            <div class="mb-3 row">
+                                <label class="col-sm-5 col-form-label">Ordering Customer Code (Tag 50F):</label>
+                                <div class="col-sm-3 ">
+                                    <input type="text" class="form-control" name="ORD.CUST.CODE">
+                                </div>
+                            </div>
+
+
+                            <div class="mb-3 row">
+                                <label class="col-sm-5 col-form-label">Ordering Customer Account (Tag 50K/50A):</label>
+                                <div class="col-sm-3">
+                                    <input type="text" class="form-control" name="ORD.CUST.ACCT">
+                                </div>
+                            </div>
+
+                            <!-- IBAN-Ord -->
+                            <div class="mb-3 row">
+                                <label class="col-sm-5 col-form-label">IBAN-Ord Cust Account (Tag 50K/50A):</label>
+                                <div class="col-sm-3">
+                                    <input type="text" class="form-control" name="ORD.CUST.ACC">
+                                </div>
+                            </div>
+
+                            <!-- Ordering Institution -->
+                            <div class="mb-3 row">
+                                <label class="col-sm-5 col-form-label">Ordering Institution (Tag 52).1:</label>
+                                <div class="col-sm-3">
+                                    <input type="text" class="form-control" name="ORDERING.BANK">
+                                </div>
+                            </div>
+
+                            <!-- Intermediary Institution -->
+                            <div class="mb-3 row">
+                                <label class="col-sm-5 col-form-label">Intermediary Institution (Tag 56).1:</label>
+                                <div class="col-sm-3">
+                                    <input type="text" class="form-control" name="INTERMED.BANK">
+                                </div>
+                            </div>
+
+
+                            <div class="mb-3 row">
+                                <label class="col-sm-5 col-form-label">IBAN-Intermediary Bank Acct (Tag 56): </label>
+                                <div class="col-sm-3">
+                                    <input type="text" class="form-control" name="INTERMED.BANK.ACC">
+                                </div>
+                            </div>
+
+                            <div class="mb-3 row">
+                                <label class="col-sm-5 col-form-label">Account With Institution (Tag 57).1 </label>
+                                <div class="col-sm-3">
+                                    <input type="text" class="form-control" name="ACCT.WITH.BANK">
+                                </div>
+                            </div>
+
+
+                            <div class="mb-3 row">
+                                <label class="col-sm-5 col-form-label">Account With Institution Name</label>
+                                <div class="col-sm-3">
+                                    <input type="text" class="form-control" name="L.BENEFICIARE">
+                                </div>
+                            </div>
+
+                            <div class="mb-3 row">
+                                <label class="col-sm-5 col-form-label">Account With Bank Acct (Tag 57):</label>
+                                <div class="col-sm-3">
+                                    <input type="text" class="form-control" name="ACCT.WITH.BANK.ACC">
+                                </div>
+                            </div>
+
+
+                            <div class="mb-3 row">
+                                <label class="col-sm-5 col-form-label">IBAN - Account With Bank Acct (Tag 57)</label>
+                                <div class="col-sm-3">
+                                    <input type="text" class="form-control" name="IBAN.ACCT.WITH.BANK">
+                                </div>
+                            </div>
+
+                            <div class="mb-3 row">
+                                <label class="col-sm-5 col-form-label">Beneficiary Customer (Tag 59).1</label>
+                                <div class="col-sm-3">
+                                    <input type="text" class="form-control" name="BEN.CUSTOMER">
+                                </div>
+                            </div>
+
+
+                            <div class="mb-3 row">
+                                <label class="col-sm-5 col-form-label">Beneficiary Account No (Tag 59)</label>
+                                <div class="col-sm-3">
+                                    <input type="text" class="form-control" name="BEN.ACCT.NO">
+                                </div>
+                            </div>
+
+
+
+                            <div class="mb-3 row">
+                                <label class="col-sm-5 col-form-label">IBAN - Beneficiary Account No (Tag 59)</label>
+                                <div class="col-sm-3">
+                                    <input type="text" class="form-control" name="IBAN.BEN">
+                                </div>
+                            </div>
+
+                            <div class="mb-3 row">
+                                <label class="col-sm-5 col-form-label">Beneficiary Name (Tag 59F).1 </label>
+                                <div class="col-sm-3">
+                                    <input type="text" class="form-control" name="BEN.NAME">
+                                </div>
+                            </div>
+
+
+                            <div class="mb-3 row">
+                                <label class="col-sm-5 col-form-label">Beneficiary Address (Tag 59F).1</label>
+                                <div class="col-sm-3">
+                                    <input type="text" class="form-control" name="BEN.ADDRESS">
+                                </div>
+                            </div>
+
+
+                            <div class="mb-3 row">
+                                <label class="col-sm-5 col-form-label">Beneficiary Country (Tag 59F)</label>
+                                <div class="col-sm-3" name="BEN.COUNTRY">
+                                    <select>
+                                        <option></option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="mb-3 row">
+                                <label class="col-sm-5 col-form-label">Beneficiary Country (Tag 59F).1</label>
+                                <div class="col-sm-3">
+                                    <input type="text" class="form-control" name="BEN.COUNTRY">
+                                </div>
+                            </div>
+
+
+                            <div class="mb-3 row">
+                                <label class="col-sm-5 col-form-label">Beneficiary Town (Tag 59F).1</label>
+                                <div class="col-sm-3">
+                                    <input type="text" class="form-control" name="BEN.TOWN">
+                                </div>
+                            </div>
+
+                            <div class="mb-3 row">
+                                <label class="col-sm-5 col-form-label">Remittance Information (Tag 70).1</label>
+                                <div class="col-sm-3">
+                                    <input type="text" class="form-control" name="PAYMENT.DETAILS">
+                                </div>
+                            </div>
+
+                            <div class="mb-3 row">
+                                <label class="col-sm-2 col-form-label">Details of Charges</label>
+                                <div class="col-sm-10">
+                                    <div class="form-check  form-check-inline" name="BEN.OUR.CHARGES">
+                                        <input class="form-check-input" type="radio" id="detail-none" value="none">
+                                        <label class="form-check-label" for="">None</label>
+                                    </div>
+                                    <div class="form-check  form-check-inline" name="BEN.OUR.CHARGES">
+                                        <input class="form-check-input" type="radio" id="detail-ben" value="" name="">
+                                        <label class="form-check-label " for="">Ben</label>
+                                    </div>
+                                    <div class="form-check  form-check-inline" name="BEN.OUR.CHARGES">
+                                        <input class="form-check-input" type="radio" id="detail-our" value="">
+                                        <label class="form-check-label" for="">Our</label>
+                                    </div>
+
+                                    <div class="form-check  form-check-inline" name="BEN.OUR.CHARGES">
+                                        <input class="form-check-input" type="radio" id="detail-sha" value="">
+                                        <label class="form-check-label" for="">Sha</label>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="mb-3 row">
+                                <label class="col-sm-5 col-form-label">Sender's Charges (Tag 71F):</label>
+                                <div class="col-sm-3">
+                                    <input type="text" class="form-control" placeholder="Auto populated by System"
+                                        readonly>
+                                </div>
+                            </div>
+
+
+                            <div class="mb-3 row">
+                                <label class="col-sm-5 col-form-label">Receiver's Charges (Tag 71G):</label>
+                                <div class="col-sm-3">
+                                    <input type="text" class="form-control" placeholder="Auto populated by System"
+                                        readonly>
+                                </div>
+                            </div>
+
+                            <div class="mb-3 row">
+                                <label class="col-sm-5 col-form-label">SWIFT MT 103 Sent To.1</label>
+                                <div class="col-sm-3">
+                                    <select name="SEND.TO.PARTY">
+                                        <option>Coll.rem.bk</option>
+                                        <option>Crcust</option>
+                                        <option>Drcust</option>
+                                        <option>Rcvbk</option>
+                                    </select>
+                                </div>
+                            </div>
+
+
+                            <div class="mb-3 row">
+                                <label class="col-sm-5 col-form-label">Sender to Receiver Info (Tag 72).1.1</label>
+                                <div class="col-sm-3">
+                                    <input type="text" class="form-control" name="BK.TO.BK.OUT">
+                                </div>
+                            </div>
+
+
+
+
+
+
+
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="tab-content">
+
+                    <div class="tab-pane fade show active" id="content-commission" role="tabpanel"
+                        aria-labelledby="tab-commission">
+                        <div class="tab-content active" id="charge-charges">
+
+
+                            <div class="mb-3 row">
+                                <label class="col-sm-2 col-form-label">Commission Code</label>
+                                <div class="col-sm-10">
+                                    <div class="form-check  form-check-inline" name="commissioncode">
+                                        <input class="form-check-input" type="radio" id="commission-none" value="none">
+                                        <label class="form-check-label" for="commission-none">[None]</label>
+                                    </div>
+                                    <div class="form-check  form-check-inline">
+                                        <input class="form-check-input" type="radio" id="commission-credit"
+                                            value="credit-less-charges" name="commissioncredit">
+                                        <label class="form-check-label " for="commission-credit">Credit Less
+                                            Charges</label>
+                                    </div>
+                                    <div class="form-check  form-check-inline">
+                                        <input class="form-check-input" type="radio" id="commission-debit"
+                                            name="commissiondebit" value="debit-plus-charges">
+                                        <label class="form-check-label" for="commissiondebit">Debit Plus Charges</label>
+                                    </div>
+                                    <div class="form-check  form-check-inline">
+                                        <input class="form-check-input" type="radio" id="commission-waive" value="waive"
+                                            checked>
+                                        <label class="form-check-label" for="commission-waive">Waive</label>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="mb-3 row">
+                                <label for="commission-type" class="col-sm-2 col-form-label">Commission Type</label>
+                                <div class="col-sm-4">
+                                    <select name="COMMISSION.TYPE">
+                                        <option>CORRCHG CORRESPONDING CHARGES</option>
+                                        <option>FTTRANSFEE FT Transfer Fee</option>
+                                    </select>
+                                </div>
+                            </div>
+
+
+                            <div class="mb-3 row">
+                                <label for="" class="col-sm-2 col-form-label">Commission Amount.1</label>
+                                <div class="col-sm-4">
+                                    <input type="text" id="" name="COMMISSION.AMT" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="mb-3 row">
+                                <label for="" class="col-sm-2 col-form-label">Commission for.1</label>
+                                <div class="col-sm-4">
+                                    <section>
+                                        <option>Receiver</option>
+                                        <option>Sender</option>
+                                    </section>
+                                </div>
+                            </div>
+
+                            <div class="mb-3 row">
+                                <label for="" class="col-sm-2 col-form-label">Charged Customer</label>
+                                <div class="col-sm-4">
+                                    <input type="text" id="" name="CHARGED.CUSTOMER" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="mb-3 row">
+                                <label for="" class="col-sm-2 col-form-label">Amount Debited</label>
+                                <div class="col-sm-4">
+                                    <input type="text" id="" name="AMOUNT.DEBITED" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="mb-3 row">
+                                <label for="" class="col-sm-2 col-form-label">Amount Credited</label>
+                                <div class="col-sm-4">
+                                    <input type="text" id="" name="AMOUNT.CREDITED" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="mb-3 row">
+                                <label for="" class="col-sm-2 col-form-label">Related Message</label>
+                                <div class="col-sm-4">
+                                    <select name="RELATED.MSG">
+                                        <option>Cover</option>
+                                        <option>Payment</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="mb-3 row">
+                                <label for="" class="col-sm-2 col-form-label">Time Indication</label>
+                                <div class="col-sm-4">
+                                    <input type="text" id="" name="TIME.IND" class="form-control">
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+                <div class="tab-content">
+
+                    <div class="tab-pane fade show active" id="content-audit" role="tabpanel"
+                        aria-labelledby="tab-audit">
+                        <div class="tab-content active" id="charge-audit">
+
+                            <!-- Commission Code -->
+                            <div class="mb-3 row">
+                                <label for="over-ride" class="col-sm-2 col-form-label">Override.1</label>
+                                <div class="col-sm-4">
+                                    <input type="text" id="bank-code" name="bankcode" class="form-control">
+                                </div>
+                            </div>
+
+                            <!-- Commission Type -->
+                            <div class="mb-3 row">
+                                <label for="record-status" class="col-sm-2 col-form-label">Record Status</label>
+                                <div class="col-sm-4">
+                                    <input type="text" id="record-status" name="recordstatus" class="form-control">
+                                </div>
+                            </div>
+
+                            <!-- Charge Account -->
+                            <div class="mb-3 row">
+                                <label for="curr-number" class="col-sm-2 col-form-label">Curr Number</label>
+                                <div class="col-sm-4">
+                                    <input type="text" id="curr-number" name="currnumber" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="mb-3 row">
+                                <label for="inputter-id" class="col-sm-2 col-form-label">Inputter Id.1</label>
+                                <div class="col-sm-4">
+                                    <input type="text" id="inputter-id" name="inputterid" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="mb-3 row">
+                                <label for="debit-currency" class="col-sm-2 col-form-label">Debit Currency</label>
+                                <div class="col-sm-3">
+
+                                    <select class="form-select" name="bankop">
+                                        <option>GHS</option>
+                                        <option>USD</option>
+                                        <option>EUR</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="mb-3 row">
+                                <label for="date-time" class="col-sm-2 col-form-label">Date & Time.1</label>
+                                <div class="col-sm-4">
+                                    <input type="date" id="date-time" name="" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="mb-3 row">
+                                <label for="authoriser" class="col-sm-2 col-form-label">Authoriser</label>
+                                <div class="col-sm-4">
+                                    <input type="text" id="authoriser" name="" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="mb-3 row">
+                                <label for="company-code" class="col-sm-2 col-form-label">Company Code</label>
+                                <div class="col-sm-4">
+                                    <input type="text" id="company-code" name="" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="mb-3 row">
+                                <label for="department-code" class="col-sm-2 col-form-label">Department Code</label>
+                                <div class="col-sm-4">
+                                    <input type="text" id="department-code" name="" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="mb-3 row">
+                                <label for="auditor-id" class="col-sm-2 col-form-label">Audit Id</label>
+                                <div class="col-sm-4">
+                                    <input type="text" id="auditor-id" name="" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="mb-3 row">
+                                <label for="auditor-date" class="col-sm-2 col-form-label">Audit Date and Time</label>
+                                <div class="col-sm-4">
+                                    <input type="text" id="auditor-date" name="" class="form-control">
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+
+                <button type="submit" class="btn btn-primary">Submit For Authorization</button>
+            </div>
+        </form>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

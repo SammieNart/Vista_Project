@@ -1,0 +1,665 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OutwardClearing Cheque</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css">
+    <style>
+        body {
+
+            background-color: #f7d5d3;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-sm navbar-light bg-danger">
+        <a href="#" class="navbar-brand mb-0 h1">
+            <img src="..\images\vista-logo.png" class="logo-top1" width="50" height="50">
+            <span class="navbar-brand mb-0 h1"><b>Vista Bank</b></span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a href="#" class="nav-link active"><b>Search</b></a>
+                </li>
+
+                <li class="nav-item ">
+                    <a href="#" class="nav-link"><b>Contact IT</b></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class=".container-fluid sm">
+        <form action="" method="post" onsubmit="alert('Transaction has been submitted!');">
+            <div class="row g-3">
+                <h2 class="mb-4">ONLINE RTGS</h2>
+
+                <ul class="nav nav-tabs" id="horizontalTabs" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="tab-online" data-bs-toggle="tab"
+                            data-bs-target="#content-online" type="button" role="tab"
+                            aria-controls="content-online" aria-selected="true">Online RTGS</button>
+                    </li>
+
+                </ul>
+
+
+
+
+                <div class="tab-content">
+
+                    <div class="tab-pane fade show active" id="content-online" role="tabpanel"
+                        aria-labelledby="tab-online">
+                        <div class="row ">
+
+                            <div class="mb-3 row">
+                                <label class="col-sm-5 col-form-label">Debit Account Id</label>
+                                <div class="col-sm-3">
+                                    <input type="text" class="form-control" name="DEBIT.ACCT.NO">
+                                </div>
+                            </div>
+
+                            
+                            <div class="mb-3 row">
+                                <label class="col-sm-5 col-form-label">Debit Currency Id</label>
+                                <div class="col-sm-3 ">   
+                                    <select id="currencyType" class="form-select" name="DEDIT.CURRENCY">
+                                        <option value="EUR">EUR - Euro</option>
+                                        <option value="GBP">GBP - Pound Sterling</option>
+                                        <option value="GMD">GMD - Dalasi</option>
+                                        <option value="GNF">GNF - Guinean Franc</option>
+                                        <option value="SLL">SLL - Leone (Sierra Leone)</option>
+                                        <option value="USD">USD - US Dollar</option>
+                                        <option value="XAF">XAF - CFA Francs BEAC (Central Africa)</option>
+                                        <option value="XAG">XAG - Silver in Ounces</option>
+                                        <option value="XAU">XAU - Gold in Ounces</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            
+                            <div class="mb-3 row">
+                                <label class="col-sm-5 col-form-label">Debit Amount</label>
+                                <div class="col-sm-3">
+                                    <input type="text" class="form-control" name="DEBIT.AMOUNT">
+                                </div>
+                            </div>
+
+
+                            <div class="mb-3 row">
+                                <label class="col-sm-5 col-form-label">CreditCurrency Id</label>
+                                <div class="col-sm-3">
+
+                                    <select id="currencyType" class="form-select" name="CREDIT.CURRENCY">
+                                        <option value="EUR">EUR - Euro</option>
+                                        <option value="GBP">GBP - Pound Sterling</option>
+                                        <option value="GMD">GMD - Dalasi</option>
+                                        <option value="GNF">GNF - Guinean Franc</option>
+                                        <option value="SLL">SLL - Leone (Sierra Leone)</option>
+                                        <option value="USD">USD - US Dollar</option>
+                                        <option value="XAF">XAF - CFA Francs BEAC (Central Africa)</option>
+                                        <option value="XAG">XAG - Silver in Ounces</option>
+                                        <option value="XAU">XAU - Gold in Ounces</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="mb-3 row">
+                                <label class="col-sm-5 col-form-label">Credit Amount</label>
+                                <div class="col-sm-3">
+                                    <input type="text" class="form-control" name="CREDIT.AMOUNT">
+                                </div>
+                            </div>
+
+                            
+                            <div class="mb-3 row">
+                                <label class="col-sm-5 col-form-label">Payment Details.1</label>
+                                <div class="col-sm-3 ">
+                                    <input type="text" class="form-control" name="PAYMENT.DETAILS"> 
+                                </div>
+                            </div>
+
+                            
+                            <div class="mb-3 row">
+                                <label class="col-sm-2 col-form-label">Beneficiary Our Charges</label>
+                                <div class="col-sm-10">
+                                    <div class="form-check  form-check-inline" name="benecode">
+                                        <input class="form-check-input" type="radio" id="benecode-none" value="none">
+                                        <label class="form-check-label" for="benecode-none">[None]</label>
+                                    </div>
+                                    <div class="form-check  form-check-inline">
+                                        <input class="form-check-input" type="radio" id="benecode-ben"
+                                            value="bene-code-ben">
+                                        <label class="form-check-label " for="bene-code-ben">Ben</label>
+                                    </div>
+
+                                    <div class="form-check  form-check-inline">
+                                        <input class="form-check-input" type="radio" id="benecode-our" 
+                                            value="debit-plus-charges">
+                                        <label class="form-check-label" for="benecodeour">Our</label>
+                                    </div>
+                                    <div class="form-check  form-check-inline">
+                                        <input class="form-check-input" type="radio" id="benecode-sha" value="waive" checked>
+                                        <label class="form-check-label" for="benecode-sha">Sha</label>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="mb-3 row">
+                                <label class="col-sm-5 col-form-label">Processing Date</label>
+                                <div class="col-sm-3 ">
+                                    <input type="date" class="form-control" name="PROCESSING.DATE">
+                                </div>
+                            </div>
+
+                            <div class="mb-3 row">
+                                <label class="col-sm-5 col-form-label">Transaction Type</label>
+                                <div class="col-sm-3 ">
+                                    <select id="transactionType" class="form-select" name="TRANSACTION.TYPE">
+                                        <option value="AC">Account Transfer - Account Trf (259, 929)</option>
+                                        <option value="BC">Clearing Transfer - Clearing (212, 212)</option>
+                                        <option value="BD">Direct Debit by Clearing - Direct Debit (215, 215)</option>
+                                        <option value="BI">Clearing Incoming - Clearing Incoming (222, 222)</option>
+                                        <option value="DW">Direct Drawing - Direct Drawing (210, 210)</option>
+                                        <option value="IC">Incoming Payment by DRAFT - Incoming DRAFT (221, 221)</option>
+                                        <option value="IM">Incoming Transfer by Mail - Incoming Mail (223, 223)</option>
+                                        <option value="IT">Account Transfer - Account Trf (258, 196)</option>
+                                        <option value="OC">Outward Cheque Payment - Cheque Payment (216, 216)</option>
+                                        <option value="OD">Outward Draft Payment - Draft Payment (211, 211)</option>
+                                        <option value="OT">Outward SWIFT Payment - SWIFT Payment (210, 210)</option>
+                                        <option value="ACP5">Inward Cheque Presentation - Inw Chq Pres (726, 726)</option>
+                                        <option value="ACP6">Inward Cheque Rejection - Inw Chq Reject (727, 727)</option>
+                                        <option value="ACP7">Inward Cheque Cancellation - Inw Chq Cancell (729, 729)</option>
+                                        <option value="ACP8">Inward Cheque Reject Cancellation - Inw Chq Rej Can (728, 728)</option>
+                                        <option value="ACPA">ATM POS Sale - ATM POS Sale (9004, 9004)</option>
+                                        <option value="ACPB">Mise en Place Prêt Interbancaire - Trsfrt Pretbank (259, 929)</option>
+                                        <option value="ACPC">Pension Plan Credit - Pension Plan Cr (2001, 213)</option>
+                                        <option value="ACPD">AA Loan Principal Decrease - Loan Prin Dec (852, 852)</option>
+                                        <option value="ACPF">Account Transfer within Portfolio - AC wthin Portf (213, 213)</option>
+                                        <option value="ACPN">Payroll Credit - Payroll Credit (2000, 213)</option>
+                                        <option value="ACPO">AA Loan Payoff - Loan Payoff (853, 853)</option>
+                                        <option value="ACPP">AA Deposit Partial Payout - Deposit Partpay (896, 896)</option>
+                                        <option value="ACPR">Remote ATM POS Sale - Remote ATM POS (9005, 9005)</option>
+                                        <option value="ACPT">Direct Credit Presentation - DC Presentation (144, 145)</option>
+                                        <option value="ACPX">Account Transfer - Account Trf (258, 213)</option>
+                                        <option value="ACQD">ATM Cheque Deposit Request - ATM CHG DEPT (9002, 9002)</option>
+                                        <option value="ACQF">Remote ATM Chq Deposit - Remote ATM Chq (9003, 776)</option>
+                                        <option value="ACR2">RTGS Transaction - RTGS (967, 968)</option>
+                                        <option value="ACR3">RTGS Transaction - RTGS (967, 968)</option>
+                                        <option value="ACR4">RTGS Transaction - RTGS (967, 968)</option>
+                                        <option value="ACR5">RTGS Transaction - RTGS (967, 968)</option>
+                                        <option value="ACR6">RTGS Transaction - RTGS (967, 968)</option>
+                                        <option value="ACR7">RTGS Transaction - RTGS (967, 968)</option>
+                                        <option value="ACR8">RTGS Transaction - RTGS (967, 968)</option>
+                                        <option value="ACR9">RTGS Transaction - RTGS (967, 968)</option>
+                                        <option value="ACRA">RTGS Transaction - RTGS (967, 968)</option>
+                                        <option value="ACRB">RTGS Transaction - RTGS (967, 968)</option>
+                                        <option value="ACRC">DC Cancellation Of Rejection - DC Canceltn REJ (138, 139)</option>
+                                        <option value="ACRD">RTGS Transaction - RTGS (967, 968)</option>
+                                        <option value="ACRF">RTGS Transaction - RTGS (967, 968)</option>
+                                        <option value="ACRG">RTGS Transaction - RTGS (967, 968)</option>
+                                        <option value="ACRH">RTGS Transaction - RTGS (967, 968)</option>
+                                        <option value="ACRP">AA Repayment - Repayment (851, 851)</option>
+                                        <option value="ACRT">RTGS Transaction - RTGS (967, 968)</option>
+                                        <option value="ACSU">Bulk Salary Upload - Bulk Salary UpL (178, 178)</option>
+                                        <option value="ACTD">Remote ATM Cash Deposit - Remote ATM Dep (775, 775)</option>
+                                        <option value="ACTF">Remote ATM Tfr Request - Remote ATM Tfr (773, 773)</option>
+                                        <option value="ACTR">FTTC for Mirror TR - MTR (874, 875)</option>
+                                        <option value="ACUF">Remote ATM Utility Payment - Remote ATM Util (783, 783)</option>
+                                        <option value="ACUP">ATM Utility Payment - ATM Utility Pay (782, 782)</option>
+                                        <option value="ACUT">ATM Utility Pay thro Teller - ATM Util Teller (784, 784)</option>
+                                        <option value="ACWF">Remote ATM Cash Withdrawal - Remote ATM Cash (771, 771)</option>
+                                        <option value="BCIB">Clearing Transfer - Clearing (212, 212)</option>
+                                        <option value="OC10">Outward Cheque Payment - Cheque Payment (211, 211)</option>
+                                        <option value="OCDS">Outward Draft Payment - Draft Payment (216, 888)</option>
+                                        <option value="OD10">Outward Draft Payment MT110 - Draft MT110 (211, 211)</option>
+                                        <option value="ODDS">Outward Cheque Payment - Cheque Payment (211, 888)</option>
+                                        <option value="OT03">Outward Swift Payment MT103 - SWIFT MT103 (210, 210)</option>
+                                        <option value="OT07">Outward Swift Payment MT103 - SWIFT MT103 (210, 210)</option>
+                                        <option value="OT12">Outward Swift Payment - Cover - SWIFT Cover (210, 210)</option>
+                                        <option value="OT20">Outward Swift MT200 - SWIFT MT200 (210, 210)</option>
+                                        <option value="OT22">Outward Swift MT202 - SWIFT MT202 (210, 210)</option>
+                                        <option value="OT24">Outward Swift Payment - Swift Payment (210, 210)</option>
+                                        <option value="OT40">Outward MT400 Collection Payment - MT400 Payment (210, 210)</option>
+                                        <option value="OTIB">Outward Swift Payment MT103 - SWIFT MT103 (210, 210)</option>
+                                        <option value="OTPX">Outward Swift Payment MT103 - SWIFT MT103 (210, 210)</option>
+                                        <option value="OTTC">Outward Telex Payment - Tlx Pmt (TC) (963, 210)</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="mb-3 row">
+                                <label class="col-sm-5 col-form-label">Beneficiary CustomerId.1</label>
+                                <div class="col-sm-3 ">
+                                    <input type="text" class="form-control" name="BEN.CUSTOMER">
+                                </div>
+                            </div>
+
+                            <div class="mb-3 row">
+                                <label class="col-sm-5 col-form-label">Beneficiary AccountId</label>
+                                <div class="col-sm-3 ">
+                                    <input type="text" class="form-control" name="BEN.ACCT.NO">
+                                </div>
+                            </div>
+
+                        
+
+                            <div class="mb-3 row">
+                                <label class="col-sm-5 col-form-label">BankSort Code</label>
+                                <div class="col-sm-3 ">
+                                    <select>
+                                        <option value="002">002 - BICIGUI   GNF1160400020100</option>
+                                        <option value="011">011 - VISTA BANK GUINEE   </option>
+                                        <option value="901">901 - CENTRAL BANK OF GAMBIA   GMD1160400132704</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="mb-3 row">
+                                <label class="col-sm-5 col-form-label">BeneficiaryIBAN</label>
+                                <div class="col-sm-3 ">
+                                    <input type="text" class="form-control" name="IBAN.BEN">
+                                </div>
+                            </div>
+
+                            <div class="mb-3 row">
+                                <label class="col-sm-5 col-form-label">BeneficiaryBIC</label>
+                                <div class="col-sm-3 ">
+                                    <input type="text" class="form-control" name="BIC.IBAN.BEN">
+                                </div>
+                            </div>
+
+                            <div class="mb-3 row">
+                                <label class="col-sm-5 col-form-label">BeneficiaryBICName</label>
+                                <div class="col-sm-3 ">
+                                    <input type="text" class="form-control" name="BIC.IBAN.BEN.NAME">
+                                </div>
+                            </div>
+
+                            <div class="mb-3 row">
+                                <label class="col-sm-5 col-form-label">BeneficiaryBICCity</label>
+                                <div class="col-sm-3 ">
+                                    <input type="text" class="form-control" name="BIC.IBAN.BEN.CITY">
+                                </div>
+                            </div>
+
+                            <div class="mb-3 row">
+                                <label class="col-sm-5 col-form-label">Customer Rate</label>
+                                <div class="col-sm-3 ">
+                                    <input type="text" class="form-control" name="CUSTOMER.RATE">
+                                </div>
+                            </div>
+
+                            <div class="mb-3 row">
+                                <label class="col-sm-5 col-form-label">Override.1</label>
+                                <div class="col-sm-3 ">
+                                    <input type="text" class="form-control" name="OVERRIDE">
+                                </div>
+                            </div>
+
+                            <div class="mb-3 row">
+                                <label class="col-sm-5 col-form-label">DebitValueDate</label>
+                                <div class="col-sm-3 ">
+                                    <input type="date" class="form-control" name="DEBIT.VALUE.DATE">
+                                </div>
+                            </div>
+
+                            <div class="mb-3 row">
+                                <label class="col-sm-5 col-form-label">OrderingCust.1</label>
+                                <div class="col-sm-3 ">
+                                    <input type="text" class="form-control" name="ORDERING.CUST">
+                                </div>
+                            </div>
+
+                            <div class="mb-3 row">
+                                <label class="col-sm-5 col-form-label">ProfitCentreDept</label>
+                                <div class="col-sm-3 ">
+                                    <input type="text" class="form-control" name="">
+                                </div>
+                            </div>
+
+                            <div class="mb-3 row">
+                                <label class="col-sm-5 col-form-label">AmountDebited</label>
+                                <div class="col-sm-3 ">
+                                    <input type="text" class="form-control" name="AMOUNT.DEBITED">
+                                </div>
+                            </div>
+
+                            <div class="mb-3 row">
+                                <label class="col-sm-5 col-form-label">Credit Value Date</label>
+                                <div class="col-sm-3 ">
+                                    <input type="date" class="form-control" name="CREDIT.VALUE.DATE">
+                                </div>
+                            </div>
+
+                            <div class="mb-3 row">
+                                <label class="col-sm-5 col-form-label">Credit TheirRef</label>
+                                <div class="col-sm-3 ">
+                                    <input type="text" class="form-control" name="CREDIT.THEIR.REF">
+                                </div>
+                            </div>
+
+                            <div class="mb-3 row">
+                                <label class="col-sm-5 col-form-label">Amount Credited</label>
+                                <div class="col-sm-3 ">
+                                    <input type="text" class="form-control" name="AMOUNT.CREDITED">
+                                </div>
+                            </div>
+
+
+                            <div class="mb-3 row">
+                                <label class="col-sm-5 col-form-label">Instrctn Code.1</label>
+                                <div class="col-sm-3 ">
+                                    <input type="text" class="form-control" name="INSTRCTN.CODE">
+                                </div>
+                            </div>
+
+                            <div class="mb-3 row">
+                                <label class="col-sm-5 col-form-label">Ben Customer1</label>
+                                <div class="col-sm-3 ">
+                                    <input type="text" class="form-control" name="BEN.CUSTOMER1">
+                                </div>
+                            </div>
+
+                            <div class="mb-3 row">
+                                <label class="col-sm-5 col-form-label">Ben Customer2</label>
+                                <div class="col-sm-3 ">
+                                    <input type="text" class="form-control" name="BEN.CUSTOMER2">
+                                </div>
+                            </div>
+
+
+                            <div class="mb-3 row">
+                                <label class="col-sm-5 col-form-label">Ben Customer3</label>
+                                <div class="col-sm-3 ">
+                                    <input type="text" class="form-control" name="BEN.CUSTOMER3">
+                                </div>
+                            </div>
+
+
+                            <div class="mb-3 row">
+                                <label class="col-sm-5 col-form-label">Ben Customer4</label>
+                                <div class="col-sm-3 ">
+                                    <input type="text" class="form-control" name="BEN.CUSTOMER4">
+                                </div>
+                            </div>
+
+                            <div class="mb-3 row">
+                                <label class="col-sm-5 col-form-label">Drp Table</label>
+                                <div class="col-sm-3 ">
+                                    <input type="text" class="form-control" name="BEN.CUSTOMER4">
+                                </div>
+                            </div>
+
+                            <div class="mb-3 row">
+                                <label class="col-sm-5 col-form-label">Cheque Number</label>
+                                <div class="col-sm-3 ">
+                                    <input type="text" class="form-control" name="CHEQUE.NUMBER">
+                                </div>
+                            </div>
+
+                            <div class="mb-3 row">
+                                <label class="col-sm-5 col-form-label">Treasury Rate</label>
+                                <div class="col-sm-3 ">
+                                    <input type="text" class="form-control" name="TREASURY.RATE">
+                                </div>
+                            </div>
+
+                            <div class="mb-3 row">
+                                <label class="col-sm-5 col-form-label">MsgPriority</label>
+                                <div class="col-sm-3 ">
+                                    <input type="text" class="form-control" name="MSG.PRIORITY">
+                                </div>
+                            </div>
+
+                            <div class="mb-3 row">
+                                <label class="col-sm-5 col-form-label">RtgsResBypass</label>
+                                <div class="col-sm-3 ">
+                                    <input type="text" class="form-control" name="RTGS.RES.BYPASS">
+                                </div>
+                            </div>
+
+                            <div class="mb-3 row">
+                                <label class="col-sm-5 col-form-label">DebitTheirRef</label>
+                                <div class="col-sm-3 ">
+                                    <input type="text" class="form-control" name="DEBIT.THEIR.REF">
+                                </div>
+                            </div>
+
+                            <div class="mb-3 row">
+                                <label class="col-sm-5 col-form-label">BenName.1</label>
+                                <div class="col-sm-3 ">
+                                    <input type="text" class="form-control" name="BEN.NAME">
+                                </div>
+                            </div>
+
+                            <div class="mb-3 row">
+                                <label class="col-sm-5 col-form-label">BenAddress.1</label>
+                                <div class="col-sm-3 ">
+                                    <input type="text" class="form-control" name="BEN.ADDRESS">
+                                </div>
+                            </div>
+
+                            <div class="mb-3 row">
+                                <label class="col-sm-5 col-form-label">BenCountry</label>
+                                <div class="col-sm-3 ">
+                                    <input type="text" class="form-control" name="BEN.COUNTRY">
+                                </div>
+                            </div>
+
+                            <div class="mb-3 row">
+                                <label class="col-sm-5 col-form-label">BenTown.1</label>
+                                <div class="col-sm-3 ">
+                                    <input type="text" class="form-control" name="BEN.TOWN">
+                                </div>
+                            </div>
+
+                            <div class="mb-3 row">
+                                <label class="col-sm-5 col-form-label">Customer Spread</label>
+                                <div class="col-sm-3 ">
+                                    <input type="text" class="form-control" name="CUSTOMER.SPREAD">
+                                </div>
+                            </div>
+
+                            <div class="mb-3 row">
+                                <label class="col-sm-5 col-form-label">RoundType</label>
+                                <div class="col-sm-3 ">
+                                    <input type="text" class="form-control" name="ROUND.TYPE">
+                                </div>
+                            </div>
+
+                            <div class="mb-3 row">
+                                <label class="col-sm-5 col-form-label">Snap ID</label>
+                                <div class="col-sm-3 ">
+                                    <input type="text" class="form-control" name="SNAP.ID">
+                                </div>
+                            </div>
+
+                            <div class="mb-3 row">
+                                <label class="col-sm-5 col-form-label">Snap Inputter</label>
+                                <div class="col-sm-3 ">
+                                    <input type="text" class="form-control" name="SNAP.INP">
+                                </div>
+                            </div>
+
+                            <div class="mb-3 row">
+                                <label class="col-sm-5 col-form-label">Snap Authorizer</label>
+                                <div class="col-sm-3 ">
+                                    <input type="text" class="form-control" name="SNAP.AUTH">
+                                </div>
+                            </div>
+
+                            <div class="mb-3 row">
+                                <label class="col-sm-5 col-form-label">RateFixingInd</label>
+                                <div class="col-sm-3 ">
+                                    <input type="text" class="form-control" name="RATE.FIXING.IND">
+                                </div>
+                            </div>
+
+                            <div class="mb-3 row">
+                                <label class="col-sm-5 col-form-label">Signatory.1 </label>
+                                <div class="col-sm-3 ">
+                                    <input type="text" class="form-control" name="SIGNATORY">
+                                </div>
+                            </div>
+
+                            <div class="mb-3 row">
+                                <label class="col-sm-5 col-form-label">Profit CentreCust</label>
+                                <div class="col-sm-3 ">
+                                    <input type="text" class="form-control" name="PROFIT.CENTRE.CUST">
+                                </div>
+                            </div>
+
+                            <div class="mb-3 row">
+                                <label class="col-sm-5 col-form-label">FtBbanDebit</label>
+                                <div class="col-sm-3 ">
+                                    <input type="text" class="form-control" name="FT.BBAN.DEBIT">
+                                </div>
+                            </div>
+
+                            <div class="mb-3 row">
+                                <label class="col-sm-5 col-form-label">DeliveryOutref .1</label>
+                                <div class="col-sm-3 ">
+                                    <input type="text" class="form-control" name="DELIVERY.OUTREF">
+                                </div>
+                            </div>
+
+                            <div class="mb-3 row">
+                                <label class="col-sm-5 col-form-label">DC Bank Code</label>
+                                <div class="col-sm-3 ">
+                                    <input type="text" class="form-control" name="DC.BANK.CODE">
+                                </div>
+                            </div>
+
+                            <div class="mb-3 row">
+                                <label class="col-sm-5 col-form-label">DC Bank Name</label>
+                                <div class="col-sm-3 ">
+                                    <input type="text" class="form-control" name="DC.BANK.NAME">
+                                </div>
+                            </div>
+
+                            <div class="mb-3 row">
+                                <label class="col-sm-5 col-form-label">LRib</label>
+                                <div class="col-sm-3 ">
+                                    <input type="text" class="form-control" name="L.RIB">
+                                </div>
+                            </div>
+
+                            <div class="mb-3 row">
+                                <label class="col-sm-5 col-form-label">codeBnqbenef</label>
+                                <div class="col-sm-3 ">
+                                    <input type="text" class="form-control" name="L.RIB">
+                                </div>
+                            </div>
+
+                            <div class="mb-3 row">
+                                <label class="col-sm-5 col-form-label">lBeneficiaire</label>
+                                <div class="col-sm-3 ">
+                                    <input type="text" class="form-control" name="L.BENEFICIARE">
+                                </div>
+                            </div>
+
+                            <div class="mb-3 row">
+                                <label class="col-sm-5 col-form-label">lCodeAgency</label>
+                                <div class="col-sm-3 ">
+                                    <input type="text" class="form-control" name="L.CODE.AGENCY">
+                                </div>
+                            </div>
+
+                            <div class="mb-3 row">
+                                <label class="col-sm-5 col-form-label">lBfNomBenef</label>
+                                <div class="col-sm-3 ">
+                                    <input type="text" class="form-control" name="L.BF.NOM.BENEF">
+                                </div>
+                            </div>
+
+                            <div class="mb-3 row">
+                                <label class="col-sm-5 col-form-label">acctWithBank.1</label>
+                                <div class="col-sm-3 ">
+                                    <input type="text" class="form-control" name="ACCT.WITH.BANK">
+                                </div>
+                            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+               
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <button type="submit" class="btn btn-primary">Submit For Authorization</button>
+        </form>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

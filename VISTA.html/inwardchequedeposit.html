@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MT 103</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css">
+    <style>
+        body {
+
+            background-color: #f7d5d3;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-sm navbar-light bg-danger">
+        <a href="#" class="navbar-brand mb-0 h1">
+            <img src="..\images\vista-logo.png" class="logo-top1" width="50" height="50">
+            <span class="navbar-brand mb-0 h1"><b>Vista Bank</b></span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a href="#" class="nav-link active"><b>Search</b></a>
+                </li>
+
+                <li class="nav-item ">
+                    <a href="#" class="nav-link"><b>Contact IT</b></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class=".container-fluid sm">
+        <form action="" method="post" onsubmit="alert('Transaction has been submitted!');">
+            <div class="row g-3">
+                <h2 class="mb-4">Inward Cheque Deposit</h2>
+
+                <ul class="nav nav-tabs" id="horizontalTabs" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="tab-outwardremittance" data-bs-toggle="tab"
+                            data-bs-target="#content-outwardremittance" type="button" role="tab"
+                            aria-controls="content-outwardremittance" aria-selected="true"> Inward Cheque Deposit
+                        </button>
+                    </li>
+
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="tab-audit" data-bs-toggle="tab" data-bs-target="#content-audit"
+                            type="button" role="tab" aria-controls="tab-audit" aria-selected="false">Audit</button>
+                    </li>
+                </ul>
+
+
+
+
+                <div class="tab-content">
+
+                    <div class="tab-pane fade show active" id="content-outwardremittance" role="tabpanel"
+                        aria-labelledby="tab-outwardremittance">
+                        <div class="row ">
+                            <!-- Sender's Reference -->
+                            <div class="mb-3 row">
+                                <label class="col-sm-5 col-form-label">Debit Account</label>
+                                <div class="col-sm-3">
+                                    <input type="text" class="form-control" name="DEBIT.ACCT.NO">
+                                </div>
+                            </div>
+
+                            <!-- Time Indication -->
+                            <div class="mb-3 row">
+                                <label class="col-sm-5 col-form-label">Credit Account</label>
+                                <div class="col-sm-3 ">
+                                    <input type="text" class="form-control" name="CREDIT.ACCT.NO">
+                                </div>
+                            </div>
+
+                            <!-- Bank Operation Code -->
+                            <div class="mb-3 row">
+                                <label class="col-sm-5 col-form-label">Cheque Ccy</label>
+                                <div class="col-sm-3">
+                                    <select class="form-select" name="CREDIT.CURRENCY">
+                                        <option>Euro Euro</option>
+                                        <option>GBP Pound Sterling</option>
+                                        <option>GMD Dalasi</option>
+                                        <option>GNF Guinean Franc</option>
+                                        <option>SLL LEONE(SIERRA LEONE)</option>
+                                        <option>USD US Dollar</option>
+                                        <option>XAF Cfa Francs Beac(Central Africa)</option>
+                                        <option>XAG SILVER in Ounces</option>
+                                        <option>XAU Gold in Ounces</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Instruction Code -->
+                            <div class="mb-3 row">
+                                <label class="col-sm-5 col-form-label">Credit Value Date</label>
+                                <div class="col-sm-3">
+                                    <input type="date" class="form-control" name="CREDIT.VALUE.DATE">
+                                </div>
+                            </div>
+
+                            <!-- Value Date -->
+                            <div class="mb-3 row">
+                                <label class="col-sm-5 col-form-label">Cheque Number</label>
+                                <div class="col-sm-3">
+                                    <input type="text" class="form-control" name="CHEQUE.NUMBER">
+                                </div>
+                            </div>
+
+                            <!-- Currency -->
+                            <div class="mb-3 row">
+                                <label class="col-sm-5 col-form-label">Drawer</label>
+                                <div class="col-sm-3 ">
+                                    <input type="text" class="form-control" name="ORDERING.CUST">
+
+                                </div>
+                            </div>
+
+                            <!-- Ordering Customer -->
+                            <div class="mb-3 row">
+                                <label class="col-sm-5 col-form-label">Cheque Amount</label>
+                                <div class="col-sm-3 ">
+                                    <input type="text" class="form-control" name="CREDIT.AMOUNT">
+                                </div>
+                            </div>
+
+
+                            <!-- Ordering Customer Code -->
+                            <div class="mb-3 row">
+                                <label class="col-sm-5 col-form-label">Drawn on</label>
+                                <div class="col-sm-3 ">
+                                    <input type="text" class="form-control" name="CHEQUE.DRAWN">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="tab-content">
+
+                    <div class="tab-pane fade show active" id="content-audit" role="tabpanel"
+                        aria-labelledby="tab-audit">
+                        <div class="tab-content active" id="charge-audit">
+
+                            <!-- Commission Code -->
+                            <div class="mb-3 row">
+                                <label for="over-ride" class="col-sm-2 col-form-label">Override.1</label>
+                                <div class="col-sm-4">
+                                    <input type="text" id="bank-code" name="OVERRIDE" class="form-control">
+                                </div>
+                            </div>
+
+                            <!-- Commission Type -->
+                            <div class="mb-3 row">
+                                <label for="record-status" class="col-sm-2 col-form-label">Record Status</label>
+                                <div class="col-sm-4">
+                                    <input type="text" id="record-status" name="RECORD.STATUS" class="form-control">
+                                </div>
+                            </div>
+
+                            <!-- Charge Account -->
+                            <div class="mb-3 row">
+                                <label for="curr-number" class="col-sm-2 col-form-label">Curr Number</label>
+                                <div class="col-sm-4">
+                                    <input type="text" id="curr-number" name="CURR.NO" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="mb-3 row">
+                                <label for="inputter-id" class="col-sm-2 col-form-label">Inputter Id.1</label>
+                                <div class="col-sm-4">
+                                    <input type="text" id="inputter-id" name="INPUTTER" class="form-control">
+                                </div>
+                            </div>
+
+
+
+                            <div class="mb-3 row">
+                                <label for="date-time" class="col-sm-2 col-form-label">Date & Time.1</label>
+                                <div class="col-sm-4">
+                                    <input type="date" id="date-time" name="DATE.TIME" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="mb-3 row">
+                                <label for="authoriser" class="col-sm-2 col-form-label">Authoriser</label>
+                                <div class="col-sm-4">
+                                    <input type="text" id="authoriser" name="AUTHORISER" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="mb-3 row">
+                                <label for="company-code" class="col-sm-2 col-form-label">Company Code</label>
+                                <div class="col-sm-4">
+                                    <input type="text" id="company-code" name="CO.CODE" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="mb-3 row">
+                                <label for="department-code" class="col-sm-2 col-form-label">Department Code</label>
+                                <div class="col-sm-4">
+                                    <input type="text" id="department-code" name="DEPT.CODE" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="mb-3 row">
+                                <label for="auditor-id" class="col-sm-2 col-form-label">Audit Id</label>
+                                <div class="col-sm-4">
+                                    <input type="text" id="auditor-id" name="AUDITOR.CODE" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="mb-3 row">
+                                <label for="auditor-date" class="col-sm-2 col-form-label">Audit Date and
+                                    Time</label>
+                                <div class="col-sm-4">
+                                    <input type="text" id="auditor-date" name="AUDIT.DATE.TIME" class="form-control">
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <button type="submit" class="btn btn-primary">Submit For Authorization</button>
+        </form>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

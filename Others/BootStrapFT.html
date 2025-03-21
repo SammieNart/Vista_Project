@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FundsTransferSMS</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container mt-5">
+        <form>
+
+            <div class="row g-3">
+
+
+                <ul class="nav nav-tabs" id="horizontalTabs" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="tab-customer" data-bs-toggle="tab"
+                            data-bs-target="#content-customer" type="button" role="tab" aria-controls="content-customer"
+                            aria-selected="true">FundsTransferSMS</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="tab-audit" data-bs-toggle="tab" data-bs-target="#content-audit"
+                            type="button" role="tab" aria-controls="tab-audit" aria-selected="false">Audit</button>
+                    </li>
+                </ul>
+
+                <div class="tab-content">
+
+                    <div class="tab-pane fade show active" id="content-customer" role="tabpanel"
+                        aria-labelledby="tab-customer">
+                        <!-- Debit Amount -->
+                        <div class="mb-3 row">
+                            <label for="debitAmount" class="col-sm-2 col-form-label">Debit Amount</label>
+                            <div class="col-sm-2">
+                                <input type="text" id="debitAmount" class="form-control">
+                            </div>
+                        </div>
+
+                        <!-- Transaction Type -->
+                        <div class="col-md-6">
+                            <label for="transactionType" class="form-label">Transaction Type</label>
+                            <select id="transactionType" class="form-select">
+                                <option>ACSM</option>
+                            </select>
+                        </div>
+                        <!-- Debit Acct No -->
+                        <div class="col-md-6">
+                            <label for="debitAcctNo" class="form-label">Debit Acct No</label>
+                            <input type="text" id="debitAcctNo" class="form-control">
+                        </div>
+                        <!-- Currency Mkt Dr -->
+                        <div class="col-md-6">
+                            <label for="currencyMktDr" class="form-label">Currency Mkt Dr</label>
+                            <input type="text" id="currencyMktDr" class="form-control" value="1">
+                        </div>
+                        <!-- Debit Currency -->
+                        <div class="col-md-6">
+                            <label for="debitCurrency" class="form-label">Debit Currency</label>
+                            <input type="text" id="debitCurrency" class="form-control">
+                        </div>
+                        <!-- Debit Amount -->
+                        <div class="col-md-6">
+                            <label for="debitAmount" class="form-label">Debit Amount</label>
+                            <input type="text" id="debitAmount" class="form-control">
+                        </div>
+                        <!-- Debit Value Date -->
+                        <div class="col-md-6">
+                            <label for="debitValueDate" class="form-label">Debit Value Date</label>
+                            <input type="date" id="debitValueDate" class="form-control">
+                        </div>
+                        <!-- Credit Their Ref -->
+                        <div class="col-md-6">
+                            <label for="creditTheirRef" class="form-label">Credit Their Ref</label>
+                            <input type="text" id="creditTheirRef" class="form-control">
+                        </div>
+                        <!-- Credit Acct No -->
+                        <div class="col-md-6">
+                            <label for="creditAcctNo" class="form-label">Credit Acct No</label>
+                            <input type="text" id="creditAcctNo" class="form-control">
+                        </div>
+                        <!-- More fields here -->
+                        <div class="col-md-6">
+                            <label for="creditMktCr" class="form-label">Currency Mkt Cr</label>
+                            <input type="text" id="creditMktCr" class="form-control">
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="creditCurrency" class="form-label">Credit Currency</label>
+                            <input type="text" id="creditCurrency" class="form-control">
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="creditAmount" class="form-label">Credit Amount</label>
+                            <input type="text" id="creditAmount" class="form-control">
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="creditValueDate" class="form-label">Credit Value Date</label>
+                            <input type="date" id="creditValueDate" class="form-control">
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="treasuryRate" class="form-label">Treasury Rate</label>
+                            <input type="text" id="treasuryRate" class="form-control">
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="negDealerRefNo" class="form-label">Neg Dealer Ref No</label>
+                            <input type="text" id="negDealerRefNo" class="form-control">
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="processingDate" class="form-label">Processing Date</label>
+                            <input type="date" id="treasuryRate" class="form-control">
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="orderingCust" class="form-label">Ordering Cust.1</label>
+                            <input type="text" id="treasuryRate" class="form-control">
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="orderingBank" class="form-label">Ordering Bank.1</label>
+                            <input type="text" id="orderingBank" class="form-control">
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="acctWithBank" class="form-label">Acct With Bank.1</label>
+                            <input type="text" id="acctWithBank" class="form-control">
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="benAcctNo" class="form-label">Ben Acct No</label>
+                            <input type="text" id="benAcctNo" class="form-control">
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="ben-customer1" class="form-label">Ben Customer.1</label>
+                            <input type="text" id="ben-customer1" class="form-control">
+                        </div>
+
+
+                        <div class="col-md-6">
+                            <label for="chequeNumber" class="form-label">Cheque Number</label>
+                            <input type="text" id="chequeNumber" class="form-control">
+                        </div>
+
+
+                        <div class="col-md-6">
+                            <label for="paymentDetails" class="form-label">Payment Details.1</label>
+                            <input type="text" id="paymentDetails" class="form-control">
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="bcBankSortCode" class="form-label">Bc Bank Sort Code</label>
+                            <input type="text" id="bcBankSortCode" class="form-control">
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="receiverBank" class="form-label">Receiver Bank</label>
+                            <input type="text" id="receiverBank" class="form-control">
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="recCorrBank" class="form-label">Rec Corr Bank.1</label>
+                            <input type="text" id="recCorrBank" class="form-control">
+                        </div>
+
+                    </div>
+
+
+                    <div class="tab-content">
+                        <div class="tab-pane fade show active" id="content-audit" role="tabpanel"
+                            aria-labelledby="tab-audit">
+
+
+                            <!-- Mailing Section -->
+                            <div class="mt-4">
+                                <h5>Mailing</h5>
+                                <div class="form-check">
+                                    <input type="radio" id="mailingNone" name="mailing" value="None"
+                                        class="form-check-input">
+                                    <label for="mailingNone" class="form-check-label">[None]</label>
+                                </div>
+                                <div class="form-check">
+                                    <input type="radio" id="mailingBank" name="mailing" value="Bank"
+                                        class="form-check-input">
+                                    <label for="mailingBank" class="form-check-label">Bank</label>
+                                </div>
+                                <div class="form-check">
+                                    <input type="radio" id="mailingBen" name="mailing" value="Ben"
+                                        class="form-check-input">
+                                    <label for="mailingBen" class="form-check-label">Ben</label>
+                                </div>
+                                <div class="form-check">
+                                    <input type="radio" id="mailingCust" name="mailing" value="Cust"
+                                        class="form-check-input">
+                                    <label for="mailingCust" class="form-check-label">Cust</label>
+                                </div>
+                            </div>
+
+
+                            <div class="col-md-6">
+                                <label for="paymethod" class="form-label">Pay Method</label>
+                                <select id="paymethod" class="form-select">
+                                    <option>Momo</option>
+                                </select>
+                            </div>
+
+
+
+
+
+                        </div>
+
+
+
+                    </div>
+
+
+
+
+
+
+
+
+
+                </div>
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+            <!-- Submit Button -->
+            <div class="text-center mt-4">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

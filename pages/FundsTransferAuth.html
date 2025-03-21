@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funds Transfer Form</title>
+
+    <style>
+        label {
+            width: 200px;
+            display: inline-block;
+
+        }
+    </style>
+    <link rel="stylesheet" href="SNAP.css">
+</head>
+
+<body>
+
+    <form>
+        <h2>Authorise/Delete Funds Transfer</h2>
+
+        <div class="form-group">
+            <label for="debit-account">Debit Account</label>
+            <select id="debit-account" name="debit-account">
+                <option></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="debit-bban">Debit Bban</label>
+            <input type="text" id="debit-bban" name="debit-bban">
+        </div>
+
+
+        <div class="form-group">
+            <label for="debit-currency">Debit Currency</label>
+            <select id="debit-currency" name="debit-currency">
+                <option value="usd">USD</option>
+                <option value="eur">EUR</option>
+                <option value="ghs">GHS</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="debit-amount">Debit Amount</label>
+            <input type="text" id="debit-amount" name="debit-amount">
+        </div>
+
+        <div class="form-group">
+            <label for="debit-value-date">Debit Value Date</label>
+            <input type="date" id="debit-date" name="debit-date">
+        </div>
+
+        <div class="form-group">
+            <label for="debit-ref">Debit Ref.</label>
+            <input type="text" id="debit-ref" name="debit-ref">
+        </div>
+        <div class="form-group">
+            <label for="credit-ref">Credit Ref.</label>
+            <input type="text" id="credit-ref" name="credit-ref">
+        </div>
+
+        <div class="form-group">
+            <label for="credit-account">Credit Account</label>
+            <input type="text" id="credit-account" name="credit-account">
+        </div>
+        <div class="form-group">
+            <label for="credit-bban">Credit Bban</label>
+            <input type="text" id="credit-bban" name="credit-bban">
+        </div>
+
+        <div class="form-group">
+            <label for="credit-currency">Credit Currency</label>
+            <select id="credit-currency" name="credit-currency">
+                <option value="usd">USD</option>
+                <option value="eur">EUR</option>
+                <option value="ghs">GHS</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="credit-amount">Credit Amount</label>
+            <input type="text" id="credit-amount" name="credit-amount">
+        </div>
+
+        <div class="form-group">
+            <label for="credit-value-date">Credit Value Date</label>
+            <input type="text" id="credit-date" name="credit-date">
+        </div>
+
+
+        <div class="form-group">
+            <label for="treasury-rate">Treasury Rate</label>
+            <input type="text" id="treasury-rate" name="treasury-rate">
+        </div>
+        <div class="form-group">
+            <label for="ordering-customer">Ordering Cust.1.1</label>
+            <input type="text" id="ordering-customer" name="ordering-customer">
+        </div>
+
+        <div class="form-group">
+            <label for="ordering-bank">Ordering Bank</label>
+            <input type="text" id="ordering-bank" name="ordering-bank">
+        </div>
+        <div class="form-group">
+            <label for="acct-with-bank">Acct with Bank</label>
+            <input type="text" id="acct-with-bank" name="acct-with-bank">
+        </div>
+
+        <div class="form-group">
+            <label for="ordering-bank">Ordering Bank</label>
+            <input type="text" id="ordering-bank" name="ordering-bank">
+        </div>
+        <div class="form-group">
+            <label for="acct-with-bank">Acct with Bank</label>
+            <input type="text" id="acct-with-bank" name="acct-with-bank">
+        </div>
+
+
+        <div class="form-group">
+            <label for="ben-acct-no">Ben Acct No.</label>
+            <input type="text" id="ben-acct-no" name="ben-acct-no">
+        </div>
+        <div class="form-group">
+            <label for="ben-customer">Ben Customer</label>
+            <input type="text" id="ben-customer" name="ben-customer">
+        </div>
+
+        <div class="form-group">
+            <label for="ben-bank">Ben Bank</label>
+            <input type="text" id="ben-bank" name="ben-bank">
+        </div>
+        <div class="form-group">
+            <label for="cheque-no">Cheque No.</label>
+            <input type="text" id="cheque-no" name="cheque-no">
+        </div>
+
+
+        <div class="form-group">
+            <label for="payment-details">Payment Details</label>
+            <input type="text" id="payment-details" name="payment-details">
+        </div>
+        <div class="form-group">
+            <label for="reciever-bank">Reciever Bank</label>
+            <input type="text" id="reciever-bank" name="reciever-bank">
+        </div>
+
+        <div class="form-group">
+            <label for="rec-corr-bank">Rec Corr Bank</label>
+            <input type="text" id="rec-corr-bank" name="rec-corr-bank">
+        </div>
+        <div class="form-group">
+            <label for="intermed-bank">Intermed Bank 1.1</label>
+            <input type="text" id="intermed-bank" name="intermed-bank">
+        </div>
+
+        <div class="form-group">
+            <label for="ben-our-charges">Ben Our Charges</label>
+            <input type="radio" id="none" name="none" value="None">
+            <label for="none">None</label>
+            <input type="radio" id="ben" name="ben" value="Ben">
+            <label for="male">Ben</label>
+            <input type="radio" id="our" name="our" value="Our">
+            <label for="our">Our</label>
+            <input type="radio" id="sha" name="sha" value="sha">
+            <label for="sha">Sha</label>
+        </div>
+
+        <div id="charge-commission" class="tabcontent">
+
+
+            <div class="form-group">
+                <label for="ben-our-charges">Commission Code</label>
+                <input type="radio" id="none" name="none" value="None">
+                <label for="none">None</label>
+                <input type="radio" id="credit" name="credit" value="credit">
+                <label for="credit">Credit Less Charges</label>
+                <input type="radio" id="debit" name="debit" value="Debit">
+                <label for="our">Debit Plus Charges</label>
+                <input type="radio" id="wave" name="wave" value="wave">
+                <label for="wave">Wave</label>
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <label for="commission-type">Commission Type 1.1</label>
+            <select id="commission-type" name="commission-type">
+                <option value="acctclose">ACCTCLOSE.</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="commission-amt">Commission Amt</label>
+            <input type="commission-amt" id="commission-amt" name="commission-amt">
+        </div>
+        <div class="form-group">
+            <label for="customer-spread">Customer Spread</label>
+            <input type="customer-spread" id="customer-spread" name="customer-spread">
+        </div>
+
+
+        <div class="form-group">
+            <label for="profit-centre-cust">Profit Centre Cust</label>
+            <select id="profit-centre-cust" name="profit-centre-cust">
+                <option value="usd"></option>
+                <option value="eur"></option>
+                <option value="ghs"></option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="profit-centre-dept">Profit Centre Dept</label>
+            <select id="profit-centre-dept" name="profit-centre-dept">
+                <option value="999 migration"></option>
+                <option value=""></option>
+                <option value=""></option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="bk-bk">Bk to Bk</label>
+            <input type="bk-bk" id="bk-bk" name="bk-bk">
+        </div>
+
+        <div class="form-group">
+            <label for="commission-rate">Customer Rate</label>
+            <input type="text" id="commission-rate" name="commission-rate">
+        </div>
+        <div class="form-group">
+            <label for="commission-spread">Delivery OutRef.1.1</label>
+            <input type="text" id="commission-spread" name="commission-spread">
+        </div>
+        <div class="form-group">
+            <label for="amount-debited">Amount Debited</label>
+            <input type="text" id="amount-debited" name="amount-debited">
+        </div>
+        <div class="form-group">
+            <label for="amount-debited">Amount Credited</label>
+            <input type="text" id="amount-credited" name="amount-credited">
+        </div>
+        <div class="form-group">
+            <label for="Instrctn-code">Instrctn Code.1.1</label>
+            <input type="text" id="Instrctn-code" name="Instrctn-code">
+        </div>
+        <div class="form-group">
+            <label for=" l-rem-bk">Coll Rem Bk</label>
+            <input type="text" id="coll-rem-bk" name="coll-rem-bk">
+        </div>
+
+        <div class="form-group">
+            <label for="related-msg">Related Msg.1.1</label>
+            <input type="text" id="related-msg" name="related-msg">
+        </div>
+
+        <div class="form-group">
+            <label for="time-ind">Time Ind.1.1.1.1</label>
+            <input type="text" id="time-ind" name="time-ind">
+        </div>
+
+        <div class="form-group">
+            <label for="send-party">Send to Party.1.1</label>
+            <input type="text" id="send-party" name="send-party">
+        </div>
+
+        <div class="form-group">
+            <label for="bk-bk">Bk to Bk Out.1</label>
+            <input type="text" id="bk-bk" name="bk-bk">
+        </div>
+
+        <div class="form-group">
+            <label for="acct-bank">Acct with Bank Acc</label>
+            <input type="text" id="acct-bank" name="acct-bank">
+        </div>
+
+        <div class="form-group">
+            <label for="rec-cor-bank">Rec Corr Bank Acc</label>
+            <input type="text" id="rec-cor-bank" name="rec-cor-bank"">
+            </div>
+    
+            <div class=" form-group">
+            <label for="intermed-bank">Intermed Bank Acct</label>
+            <input type="text" id="intermed-bank" name="intermed-bank">
+        </div>
+
+
+
+        <div class="form-group">
+            <label for="cover-method">Cover Method</label>
+            <select id="cover-method" name="cover-method">
+                <option value="Cover-direct"></option>
+                <option value="Cover-near"></option>
+                <option value=""></option>
+            </select>
+        </div>
+
+
+        <div class="form-group">
+            <label for="bk-operation">Bk Operation Code</label>
+            <select id="bk-operation" name="bk-operation">
+                <option value="Chqb"></option>
+                <option value="Credit"></option>
+                <option value=""></option>
+            </select>
+        </div>
+
+
+
+
+
+
+
+
+
+
+        <div class="tab-content" id="audit">
+            <!-- Add audit-specific fields here -->
+            <p>Audit content goes here.</p>
+        </div>
+    </form>
+
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,1157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FundsTransferSMS</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+
+            background-color: #f7d5d3;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-sm navbar-light bg-danger">
+        <a href="#" class="navbar-brand mb-0 h1">
+            <img src="C:\xampp\htdocs\VistaBank_Screens\assets\vista-logo.png" class="logo-top1" width="50" height="50">
+            <span class="navbar-brand mb-0 h1"><b>Vista Bank</b></span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a href="#" class="nav-link active"><b>Search</b></a>
+                </li>
+
+                <li class="nav-item ">
+                    <a href="#" class="nav-link"><b>Contact IT</b></a>
+                </li>
+            </ul>
+
+
+        </div>
+
+    </nav>
+
+
+
+    <div class=".container-fluid sm">
+        <form >
+
+            <div class="row g-3">
+
+                <ul class="nav nav-tabs" id="horizontalTabs" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="tab-rtgsgm" data-bs-toggle="tab"
+                            data-bs-target="#content-rtgsgm" type="button" role="tab" aria-controls="content-rtgsgm"
+                            aria-selected="true">RTGSGM</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="tab-audit" data-bs-toggle="tab" data-bs-target="#content-audit"
+                            type="button" role="tab" aria-controls="tab-audit" aria-selected="false">Audit</button>
+                    </li>
+                </ul>
+
+                <div class="tab-content">
+
+                    <div class="tab-pane fade show active" id="content-rtgsgm" role="tabpanel"
+                        aria-labelledby="tab-rtgsgm">
+                        <div class="row">
+                            <!-- Transaction Type -->
+                            <div class="mb-3 row">
+                                <label for="transactionType" class="col-sm-2 col-form-label">Transaction Type</label>
+                                <div class="col-sm-2">
+                                    <select id="transactionType" class="form-select" name="TRANSACTION.TYPE">
+                                        <option value="AC">Account Transfer - Account Trf (259, 929)</option>
+                                        <option value="BC">Clearing Transfer - Clearing (212, 212)</option>
+                                        <option value="BD">Direct Debit by Clearing - Direct Debit (215, 215)</option>
+                                        <option value="BI">Clearing Incoming - Clearing Incoming (222, 222)</option>
+                                        <option value="DW">Direct Drawing - Direct Drawing (210, 210)</option>
+                                        <option value="IC">Incoming Payment by DRAFT - Incoming DRAFT (221, 221)</option>
+                                        <option value="IM">Incoming Transfer by Mail - Incoming Mail (223, 223)</option>
+                                        <option value="IT">Account Transfer - Account Trf (258, 196)</option>
+                                        <option value="OC">Outward Cheque Payment - Cheque Payment (216, 216)</option>
+                                        <option value="OD">Outward Draft Payment - Draft Payment (211, 211)</option>
+                                        <option value="OT">Outward SWIFT Payment - SWIFT Payment (210, 210)</option>
+                                        <option value="ACP5">Inward Cheque Presentation - Inw Chq Pres (726, 726)</option>
+                                        <option value="ACP6">Inward Cheque Rejection - Inw Chq Reject (727, 727)</option>
+                                        <option value="ACP7">Inward Cheque Cancellation - Inw Chq Cancell (729, 729)</option>
+                                        <option value="ACP8">Inward Cheque Reject Cancellation - Inw Chq Rej Can (728, 728)</option>
+                                        <option value="ACPA">ATM POS Sale - ATM POS Sale (9004, 9004)</option>
+                                        <option value="ACPB">Mise en Place Prêt Interbancaire - Trsfrt Pretbank (259, 929)</option>
+                                        <option value="ACPC">Pension Plan Credit - Pension Plan Cr (2001, 213)</option>
+                                        <option value="ACPD">AA Loan Principal Decrease - Loan Prin Dec (852, 852)</option>
+                                        <option value="ACPF">Account Transfer within Portfolio - AC wthin Portf (213, 213)</option>
+                                        <option value="ACPN">Payroll Credit - Payroll Credit (2000, 213)</option>
+                                        <option value="ACPO">AA Loan Payoff - Loan Payoff (853, 853)</option>
+                                        <option value="ACPP">AA Deposit Partial Payout - Deposit Partpay (896, 896)</option>
+                                        <option value="ACPR">Remote ATM POS Sale - Remote ATM POS (9005, 9005)</option>
+                                        <option value="ACPT">Direct Credit Presentation - DC Presentation (144, 145)</option>
+                                        <option value="ACPX">Account Transfer - Account Trf (258, 213)</option>
+                                        <option value="ACQD">ATM Cheque Deposit Request - ATM CHG DEPT (9002, 9002)</option>
+                                        <option value="ACQF">Remote ATM Chq Deposit - Remote ATM Chq (9003, 776)</option>
+                                        <option value="ACR2">RTGS Transaction - RTGS (967, 968)</option>
+                                        <option value="ACR3">RTGS Transaction - RTGS (967, 968)</option>
+                                        <option value="ACR4">RTGS Transaction - RTGS (967, 968)</option>
+                                        <option value="ACR5">RTGS Transaction - RTGS (967, 968)</option>
+                                        <option value="ACR6">RTGS Transaction - RTGS (967, 968)</option>
+                                        <option value="ACR7">RTGS Transaction - RTGS (967, 968)</option>
+                                        <option value="ACR8">RTGS Transaction - RTGS (967, 968)</option>
+                                        <option value="ACR9">RTGS Transaction - RTGS (967, 968)</option>
+                                        <option value="ACRA">RTGS Transaction - RTGS (967, 968)</option>
+                                        <option value="ACRB">RTGS Transaction - RTGS (967, 968)</option>
+                                        <option value="ACRC">DC Cancellation Of Rejection - DC Canceltn REJ (138, 139)</option>
+                                        <option value="ACRD">RTGS Transaction - RTGS (967, 968)</option>
+                                        <option value="ACRF">RTGS Transaction - RTGS (967, 968)</option>
+                                        <option value="ACRG">RTGS Transaction - RTGS (967, 968)</option>
+                                        <option value="ACRH">RTGS Transaction - RTGS (967, 968)</option>
+                                        <option value="ACRP">AA Repayment - Repayment (851, 851)</option>
+                                        <option value="ACRT">RTGS Transaction - RTGS (967, 968)</option>
+                                        <option value="ACSU">Bulk Salary Upload - Bulk Salary UpL (178, 178)</option>
+                                        <option value="ACTD">Remote ATM Cash Deposit - Remote ATM Dep (775, 775)</option>
+                                        <option value="ACTF">Remote ATM Tfr Request - Remote ATM Tfr (773, 773)</option>
+                                        <option value="ACTR">FTTC for Mirror TR - MTR (874, 875)</option>
+                                        <option value="ACUF">Remote ATM Utility Payment - Remote ATM Util (783, 783)</option>
+                                        <option value="ACUP">ATM Utility Payment - ATM Utility Pay (782, 782)</option>
+                                        <option value="ACUT">ATM Utility Pay thro Teller - ATM Util Teller (784, 784)</option>
+                                        <option value="ACWF">Remote ATM Cash Withdrawal - Remote ATM Cash (771, 771)</option>
+                                        <option value="BCIB">Clearing Transfer - Clearing (212, 212)</option>
+                                        <option value="OC10">Outward Cheque Payment - Cheque Payment (211, 211)</option>
+                                        <option value="OCDS">Outward Draft Payment - Draft Payment (216, 888)</option>
+                                        <option value="OD10">Outward Draft Payment MT110 - Draft MT110 (211, 211)</option>
+                                        <option value="ODDS">Outward Cheque Payment - Cheque Payment (211, 888)</option>
+                                        <option value="OT03">Outward Swift Payment MT103 - SWIFT MT103 (210, 210)</option>
+                                        <option value="OT07">Outward Swift Payment MT103 - SWIFT MT103 (210, 210)</option>
+                                        <option value="OT12">Outward Swift Payment - Cover - SWIFT Cover (210, 210)</option>
+                                        <option value="OT20">Outward Swift MT200 - SWIFT MT200 (210, 210)</option>
+                                        <option value="OT22">Outward Swift MT202 - SWIFT MT202 (210, 210)</option>
+                                        <option value="OT24">Outward Swift Payment - Swift Payment (210, 210)</option>
+                                        <option value="OT40">Outward MT400 Collection Payment - MT400 Payment (210, 210)</option>
+                                        <option value="OTIB">Outward Swift Payment MT103 - SWIFT MT103 (210, 210)</option>
+                                        <option value="OTPX">Outward Swift Payment MT103 - SWIFT MT103 (210, 210)</option>
+                                        <option value="OTTC">Outward Telex Payment - Tlx Pmt (TC) (963, 210)</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <!-- Debit Acct No -->
+                            <div class="mb-3 row">
+                                <label for="debitAcctNo" class="col-sm-2 col-form-label">Debit Acct No</label>
+                                <div class="col-sm-2">
+                                    <input type="text" id="debitAcctNo" class="form-control" name="DEBIT.ACCT.NO">
+                                </div>
+
+                            </div>
+                            <!-- Currency Mkt Dr -->
+                            <div class="mb-3 row">
+                                <label for="currencyMktDr" class="col-sm-2 col-form-label">Currency Mkt Dr</label>
+                                <div class="col-sm-2">
+                                    <input type="text" id="currencyMktDr" class="form-control" value="1"
+                                        name="CURRENCY.MKT.DR">
+                                </div>
+                            </div>
+                            <!-- Debit Currency -->
+                            <div class="mb-3 row">
+                                <label for="debitCurrency" class="col-sm-2 col-form-label">Debit Currency</label>
+                                <div class="col-sm-2">
+                                    <select id="currencyType" class="form-select" name="DEBIT.CURRENCY">
+                                        <option value="EUR">EUR - Euro</option>
+                                        <option value="GBP">GBP - Pound Sterling</option>
+                                        <option value="GMD">GMD - Dalasi</option>
+                                        <option value="GNF">GNF - Guinean Franc</option>
+                                        <option value="SLL">SLL - Leone (Sierra Leone)</option>
+                                        <option value="USD">USD - US Dollar</option>
+                                        <option value="XAF">XAF - CFA Francs BEAC (Central Africa)</option>
+                                        <option value="XAG">XAG - Silver in Ounces</option>
+                                        <option value="XAU">XAU - Gold in Ounces</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            
+
+                            <div class="mb-3 row">
+                                <label for="debitAmount" class="col-sm-2 col-form-label">Debit Amount</label>
+                                <div class="col-sm-2">
+                                    <input type="text" id="debitAmount" class="form-control" name="DEBIT.AMOUNT">
+                                </div>
+                            </div>
+                            
+                            
+
+                            <div class="mb-3 row">
+                                <label for="debitValueDate" class="col-sm-2 col-form-label">Debit Value Date</label>
+                                <div class="col-sm-2">
+                                    <input type="date" id="debitValueDate" class="form-control" name="DEBIT.VALUE.DATE">
+                                </div>
+                            </div>
+                           
+
+                            <div class="mb-3 row">
+                                <label for="creditTheirRef" class="col-sm-2 col-form-label">Credit Their Ref</label>
+                                <div class="col-sm-2">
+                                    <input type="text" id="creditTheirRef" class="form-control" name="CREDIT.THEIR.REF">
+                                </div>
+                            </div>
+                            <!-- Credit Acct No -->
+                            <div class="mb-3 row">
+                                <label for="creditAcctNo" class="col-sm-2 col-form-label">Credit Acct No</label>
+                                <div class="col-sm-2">
+                                    <input type="text" id="creditAcctNo" class="form-control" name="CREDIT.ACCT.NO">
+                                </div>
+
+                            </div>
+                            
+                            <div class="mb-3 row">
+                                <label for="currencyMktDr" class="col-sm-2 col-form-label">Currency Mkt Dr</label>
+                                <div class="col-sm-2">
+                                    <input type="text" id="currencyMktDr" class="form-control" value="1"
+                                        name="CURRENCY.MKT.DR">
+                                </div>
+                            </div>
+
+                            <div class="mb-3 row">
+                                <label for="creditCurrency" class="col-sm-2 col-form-label">Credit Currency</label>
+                                <div class="col-sm-2">
+                                    <select id="currencyType" class="form-select" name="CREDIT.CURRENCY">
+                                        <option value="EUR">EUR - Euro</option>
+                                        <option value="GBP">GBP - Pound Sterling</option>
+                                        <option value="GMD">GMD - Dalasi</option>
+                                        <option value="GNF">GNF - Guinean Franc</option>
+                                        <option value="SLL">SLL - Leone (Sierra Leone)</option>
+                                        <option value="USD">USD - US Dollar</option>
+                                        <option value="XAF">XAF - CFA Francs BEAC (Central Africa)</option>
+                                        <option value="XAG">XAG - Silver in Ounces</option>
+                                        <option value="XAU">XAU - Gold in Ounces</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="mb-3 row">
+                                <label for="creditAmount" class="col-sm-2 col-form-label">Credit Amount</label>
+                                <div class="col-sm-2">
+                                    <input type="text" id="creditAmount" class="form-control" name="CREDIT.AMOUNT">
+                                </div>
+
+                            </div>
+
+                            <div class="mb-3 row">
+                                <label for="creditValueDate" class="col-sm-2 col-form-label">Credit Value Date</label>
+                                <div class="col-sm-2">
+                                    <input type="date" id="creditValueDate" class="form-control" name="CREDIT.VALUE.DATE">
+                                </div>
+                            </div>
+
+                            <div class="mb-3 row">
+                                <label for="treasuryRate" class="col-sm-2 col-form-label">Treasury Rate</label>
+                                <div class="col-sm-2">
+                                    <input type="text" id="treasuryRate" class="form-control" name="TREASURY.RATE">
+                                </div>
+
+                            </div>
+
+                            <div class="mb-3 row">
+                                <label for="negDealerRefNo" class="col-sm-2 col-form-label">Neg Dealer Ref No</label>
+                                <div class="col-sm-2">
+                                    <input type="text" id="negDealerRefNo" class="form-control" name="NEG.DEALER.REFNO">
+                                </div>
+                            </div>
+
+                            <div class="mb-3 row">
+                                <label for="processingDate" class="col-sm-2 col-form-label">Processing Date</label>
+                                <div class="col-sm-2">
+                                    <input type="date" id="treasuryRate" class="form-control" name="PROCESSING.DATE">
+                                </div>
+
+                            </div>
+
+                            <div class="mb-3 row">
+                                <label for="orderingCust" class="col-sm-2 col-form-label">Ordering Cust.1</label>
+                                <div class="col-sm-2">
+                                    <input type="text" id="treasuryRate" class="form-control" name="ORDERING.CUST">
+                                </div>
+
+                            </div>
+
+                            <div class="mb-3 row">
+                                <label for="orderingCust" class="col-sm-2 col-form-label">In Ordering Cust.1</label>
+                                <div class="col-sm-2">
+                                    <input type="text" id="treasuryRate" class="form-control" name="IN.ORDERING.CUST">
+                                </div>
+
+                            </div>
+
+                            <div class="mb-3 row">
+                                <label for="orderingBank" class="col-sm-2 col-form-label">Ordering Bank.1</label>
+                                <div class="col-sm-2">
+                                    <input type="text" id="orderingBank" class="form-control" name="ORDERING.BANK">
+                                </div>
+
+                            </div>
+
+                            <div class="mb-3 row">
+                                <label for="inorderbank" class="col-sm-2 col-form-label">In Ordering Bank.1</label>
+                                <div class="col-sm-2">
+                                    <input type="text" id="inorderbank" class="form-control" name="IN.ORDERING.BK">
+                                </div>
+                            </div>
+
+                            <div class="mb-3 row">
+                                <label for="acctbank" class="col-sm-2 col-form-label">Acct With Bank.1</label>
+                                <div class="col-sm-2">
+                                    <input type="text" id="acctbank" class="form-control" name="ACCT.WITH.BANK">
+                                </div>
+                            </div>
+
+                            <div class="mb-3 row">
+                                <label for="acctbk" class="col-sm-2 col-form-label">Acct With Bk.1</label>
+                                <div class="col-sm-2">
+                                    <input type="text" id="acctbk" class="form-control" name="ACCT.WITH.BK">
+                                </div>
+                            </div>
+
+                            <div class="mb-3 row">
+                                <label for="benAcctNo" class="col-sm-2 col-form-label">Ben Acct No</label>
+                                <div class="col-sm-2">
+                                    <input type="text" id="benAcctNo" class="form-control" name="BEN.ACCT.NO">
+                                </div>
+
+                            </div>
+
+
+
+                            <div class="mb-3 row">
+                                <label for="ben-customer1" class="col-sm-2 col-form-label">In Ben Acct No</label>
+                                <div class="col-sm-2">
+                                    <input type="text" id="ben-customer1" class="form-control" name="IN.BEN.ACCT.NO">
+                                </div>
+
+                            </div>
+
+                            <div class="mb-3 row">
+                                <label for="inben-customer1" class="col-sm-2 col-form-label">In Ben Customer.1</label>
+                                <div class="col-sm-2">
+                                    <input type="text" id="inben-customer1" class="form-control" name="IN.BEN.CUSTOMER">
+                                </div>
+
+                            </div>
+
+
+                            <div class="mb-3 row">
+                                <label for="chequeNumber" class="col-sm-2 col-form-label">Cheque Number</label>
+                                <div class="col-sm-2">
+                                    <input type="text" id="chequeNumber" class="form-control" name="CHEQUE.NUMBER">
+                                </div>
+
+                            </div>
+
+
+                            <div class="mb-3 row">
+                                <label for="paymentDetails" class="col-sm-2 col-form-label">Payment Details.1</label>
+                                <div class="col-sm-2">
+                                    <input type="text" id="paymentDetails" class="form-control" name="PAYMENT.DETAILS">
+                                </div>
+
+                            </div>
+
+                            <div class="mb-3 row">
+                                <label for="bcBankSortCode" class="col-sm-2 col-form-label">In Pay Details.1</label>
+                                <div class="col-sm-2">
+                                    <input type="text" id="bcBankSortCode" class="form-control" name="IN.PAY.DETAILS">
+                                </div>
+
+                            </div>
+
+                            <div class="mb-3 row">
+                                <label for="receiverBank" class="col-sm-2 col-form-label">Bc Bank Sort Code</label>
+                                <div class="col-sm-2">
+                                    <input type="text" id="bcBankSortCode" class="form-control" name="BC.BANK.SORT.CODE">
+                                </div>
+
+                            </div>
+
+                            <div class="mb-3 row">
+                                <label for="recCorrBank" class="col-sm-2 col-form-label">Receiver Bank</label>
+                                <div class="col-sm-2">
+                                    <input type="text" id="receiverBank" class="form-control" name="RECEIVER.BANK">
+                                </div>
+
+                            </div>
+
+                            <div class="mb-3 row">
+                                <label for="recCorrBank" class="col-sm-2 col-form-label">Rec Corr Bank.1</label>
+                                <div class="col-sm-2">
+                                    <input type="text" id="recCorrBank" class="form-control" name="REC.CORR.BANK">
+                                </div>
+
+                            </div>
+
+                            <div class="mb-3 row">
+                                <label for="recCorrBank" class="col-sm-2 col-form-label">Intermed Bank.1</label>
+                                <div class="col-sm-2">
+                                    <input type="text" id="intermedbank" class="form-control" name="INTERMED.BANK">
+                                </div>
+
+                            </div>
+
+                            <div class="mb-3 row">
+                                <label for="recCorrBank" class="col-sm-2 col-form-label">In Intmed Bank.1</label>
+                                <div class="col-sm-2">
+                                    <input type="text" id="inintermedbank" class="form-control" name="IN.INTERMED.BANK">
+                                </div>
+
+                            </div>
+                        </div>
+
+                        
+                        <div class="mb-3 " name="MAILING">
+                            <div class="form-check-inline">
+                                <label for="mailing" class="form-check-label">Mailing</label>
+                            </div>
+                            <div class="form-check-inline">
+                                <input type="radio" id="mailingNone"  value="None"
+                                    class="form-check-input">
+                                <label for="mailingNone" class="form-check-label">None</label>
+
+                            </div>
+                            <div class="form-check-inline">
+                                <input type="radio" id="mailingBank"  value="Bank"
+                                    class="form-check-input">
+                                <label for="mailingBank" class="form-check-label">Bank</label>
+                            </div>
+                            <div class="form-check-inline">
+                                <input type="radio" id="mailingBen"  value="Ben" class="form-check-input">
+                                <label for="mailingBen" class="form-check-label">Ben</label>
+                            </div>
+                            <div class="form-check-inline">
+                                <input type="radio" id="mailingCust"  value="Cust"
+                                    class="form-check-input">
+                                <label for="mailingCust" class="form-check-label">Cust</label>
+                            </div>
+                        </div>
+
+
+
+                        <!--Pay Method-->
+                        <div class="mb-3 row">
+                            <label for="paymethod" class="col-sm-2 col-form-label">Pay Method</label>
+                            <div class="col-sm-2">
+                                <select id="paymethod" class="form-select">
+                                    <option>Ai</option>
+                                    <option>At</option>
+                                    <option>Ch</option>
+                                    <option>Pa</option>
+                                    <option>Pb</option>
+                                    <option>Pp</option>
+                                    <option>Pt</option>
+                                    <option>Ta</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+
+                        <div class="mb-3">
+                            <div class="form-check-inline" name="BEN.OUR.CHARGES">
+                                <label for="mailing" class="form-check-label">Ben Our Charges</label>
+                            </div>
+                            <div class="form-check-inline">
+                                <input type="radio" id="benNone" value="None"
+                                    class="form-check-input">
+                                <label for="commissionCodeNone" class="form-check-label">None</label>
+                            </div>
+
+                            <div class="form-check-inline">
+                                <input type="radio" id="benCredit" class="form-check-input">
+                                <label for="commissionCodecredit" class="form-check-label">Ben</label>
+                            </div>
+
+                            <div class="form-check-inline">
+                                <input type="radio" id="bendebit"  class="form-check-input">
+                                <label for="" class="form-check-label">Our</label>
+
+                            </div>
+                            <div class="form-check-inline">
+                                <input type="radio" id="bensha" 
+                                    class="form-check-input">
+                                <label  class="form-check-label">Sha</label>
+                            </div>
+
+
+                        </div>
+
+                        <div class="mb-3 row">
+                            <label  class="col-sm-2 col-form-label">Charge Com Display</label>
+                            <div class="col-sm-2">
+                                <input type="text" id="chargedis" class="form-control" name="">
+                            </div>
+                        </div>
+
+
+                        <div class="mb-3 row">
+                            <label for="commissionAmt" class="col-sm-2 col-form-label">Commission Amt.1</label>
+                            <div class="col-sm-2">
+                                <input type="text" id="commissionAmt" class="form-control" name="commissionAmt">
+                            </div>
+                        </div>
+
+                        <div class="mb-3 row">
+                            <label for="commissionFor" class="col-sm-2 col-form-label">Commission For.1</label>
+                            <div class="col-sm-2">
+                                <input type="text" id="commissionFor" class="form-control" name="commissionFor">
+                            </div>
+                        </div>
+
+
+
+                        <!-- Charge Fields -->
+                        <div class="form-check-inline">
+                            <label for="chargeCode">Charge Code</label>
+
+                            <label><input type="radio" name="chargeCode" value="None"> [None]</label>
+                            <label><input type="radio" name="chargeCode" value="CreditLessCharges"> Credit Less
+                                Charges</label>
+                            <label><input type="radio" name="chargeCode" value="DebitPlusCharges"> Debit Plus
+                                Charges</label>
+                            <label><input type="radio" name="chargeCode" value="Waive"> Waive</label>
+
+                        </div>
+
+
+                        <div class="mb-3 row">
+                            <label for="chargeType" class="col-sm-2 col-form-label">Charge Type.1</label>
+                            <div class="col-sm-2">
+                                <input type="text" id="chargeType" class="form-control" name="chargeType">
+                            </div>
+                        </div>
+
+
+                        <div class="mb-3 row">
+                            <label for="chargeAmt" class="col-sm-2 col-form-label">Charge Amt.1</label>
+                            <div class="col-sm-2">
+                                <input type="text" id="chargeAmt" class="form-control" name="chargeAmt">
+                            </div>
+                        </div>
+
+                        <div class="mb-3 row">
+                            <label for="chargeFor" class="col-sm-2 col-form-label">Charge For.1</label>
+                            <div class="col-sm-2">
+                                <input type="text" id="chargeFor" class="form-control" name="chargeFor">
+                            </div>
+                        </div>
+
+
+                        <div class="mb-3 row">
+                            <label for="customerSpread" class="col-sm-2 col-form-label">Customer Spread</label>
+                            <div class="col-sm-2">
+                                <input type="text" id="customerSpread" class="form-control" name="customerSpread">
+                            </div>
+                        </div>
+
+                        <div class="mb-3 row">
+                            <label for="baseCurrency" class="col-sm-2 col-form-label">Base Currency</label>
+                            <div class="col-sm-2">
+                                <input type="text" id="baseCurrency" class="form-control" name="baseCurrency">
+                            </div>
+                        </div>
+
+                        <div class="mb-3 row">
+                            <label for="profitCentreCust" class="col-sm-2 col-form-label">Profit Centre Cust</label>
+                            <div class="col-sm-2">
+                                <input type="text" id="profitCentreCust" class="form-control" name="profitCentreCust">
+                            </div>
+                        </div>
+
+
+                        <div class="mb-3 row">
+                            <label for="profitCentreDept" class="col-sm-2 col-form-label">Profit Centre Dept</label>
+                            <div class="col-sm-2">
+                                <input type="text" id="profitCentreDept" class="form-control" name="profitCentreDept">
+                            </div>
+                        </div>
+
+
+                        <div class="form-check-inline">
+                            <label>Return To Dept</label>
+                            <label><input type="radio" name="returnToDept" value="None"> [None]</label>
+                            <label><input type="radio" name="returnToDept" value="No"> No</label>
+                            <label><input type="radio" name="returnToDept" value="Yes"> Y</label>
+                        </div>
+
+
+                        <div class="mb-3 row">
+                            <label for="priorityTxn" class="col-sm-2 col-form-label">Priority Txn</label>
+                            <div class="col-sm-2">
+                                <input type="text" id="priorityTxn" class="form-control" name="priorityTxn">
+                            </div>
+                        </div>
+
+
+                        <div class="mb-3 row">
+                            <label for="bkToBkInfo" class="col-sm-2 col-form-label">Bk To Bk Info.1</label>
+                            <div class="col-sm-2">
+                                <input type="text" id="bkToBkInfo" class="form-control" name="bkToBkInfo">
+                            </div>
+                        </div>
+
+                        <div class="mb-3 row">
+                            <label for="exposureDate" class="col-sm-2 col-form-label">Exposure Date</label>
+                            <div class="col-sm-2">
+                                <input type="text" id="exposureDate" class="form-control" name="exposureDate">
+                            </div>
+                        </div>
+
+                        <!--  Radio-->
+                        <div class="form-check-inline">
+                            <label>Fed Funds</label>
+                            <label><input type="radio" name="fedFunds" value="None"> [None]</label>
+                            <label><input type="radio" name="fedFunds" value="No"> No</label>
+                            <label><input type="radio" name="fedFunds" value="Yes"> Y</label>
+
+                        </div>
+
+                        <div class="mb-3 row">
+                            <label for="message" class="col-sm-2 col-form-label">Message.1</label>
+                            <div class="col-sm-2">
+                                <input type="text" id="message" class="form-control" name="message">
+                            </div>
+                        </div>
+
+                        <div class="mb-3 row">
+                            <label for="iblcCodeCr" class="col-sm-2 col-form-label">IBLC.CODE-CR</label>
+                            <div class="col-sm-2">
+                                <input type="text" id="iblcCodeCr" class="form-control" name="iblcCodeCr">
+                            </div>
+                        </div>
+
+                        <div class="mb-3 row">
+                            <label for="iblcCodeCr" class="col-sm-2 col-form-label">IBLC.CODE-CR</label>
+                            <div class="col-sm-2">
+                                <input type="text" id="iblcCodeCr" class="form-control" name="iblcCodeCr">
+                            </div>
+                        </div>
+
+                        <!--IBLC.COUNTRY-CR dropdown-->
+                        <div class="mb-3 row">
+                            <label for="iblcCountryCr" class="col-sm-2 col-form-label">IBLC.COUNTRY-CR</label>
+                            <div class="col-sm-2">
+                                <select id="iblcCountryCr" class="form-select">
+                                    <option>None</option>
+                                </select>
+                            </div>
+                        </div>
+
+
+                        <div class="mb-3 row">
+                            <label for="iblc-country-dr" class="col-sm-2 col-form-label">IBLC.COUNTRY-DR</label>
+                            <div class="col-sm-2">
+                                <input type="text" id="iblc-country-dr" class="form-control" name="iblccountrydr">
+                            </div>
+                        </div>
+
+                        <div class="mb-3 row">
+                            <label for="iblc-country-cr" class="col-sm-2 col-form-label">IBLC.COUNTRY-CR</label>
+                            <div class="col-sm-2">
+                                <input type="text" id="iblc-country-cr" class="form-control" name="iblc-country-cr">
+                            </div>
+                        </div>
+
+                        <div class="mb-3 row">
+                            <label for="iblc-country-ch" class="col-sm-2 col-form-label">IBLC.COUNTRY-CH</label>
+                            <div class="col-sm-2">
+                                <input type="text" id="iblc-country-ch" class="form-control" name="iblc-country-ch">
+                            </div>
+                        </div>
+
+                        <div class="mb-3 row">
+                            <label for="future-date" class="col-sm-2 col-form-label">Future Date</label>
+                            <div class="col-sm-2">
+                                <input type="text" id="Future Date" class="form-control" name="futuredate">
+                            </div>
+                        </div>
+
+                        <div class="mb-3 row">
+                            <label for="iblc-code-dr" class="col-sm-2 col-form-label">IBLC.CODE-DR</label>
+                            <div class="col-sm-2">
+                                <input type="text" id="iblc-code-dr" class="form-control" name="blccodedr">
+                            </div>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="Immediately">
+                            <label class="form-check-label" for="Immediately">
+                                Immediately
+                            </label>
+                        </div>
+
+                        <div class="mb-3 row">
+                            <label for="ft-bban-debit" class="col-sm-2 col-form-label">Ft Bban Debit</label>
+                            <div class="col-sm-2">
+                                <input type="text" id="ft-bban-debit" class="form-control" name="ftbbandebit">
+                            </div>
+                        </div>
+
+                        <div class="mb-3 row">
+                            <label for="t-bban-credit" class="col-sm-2 col-form-label">Ft Bban Credit</label>
+                            <div class="col-sm-2">
+                                <input type="text" id="ft-bban-credit" class="form-control" name="ftbbancredit">
+                            </div>
+                        </div>
+
+                        <div class="mb-3 row">
+                            <label for="snap-inp" class="col-sm-2 col-form-label">Snap Inp</label>
+                            <div class="col-sm-2">
+                                <input type="text" id="snap-inp" class="form-control" name="snapinp">
+                            </div>
+                        </div>
+
+                        <div class="mb-3 row">
+                            <label for="snap-auth" class="col-sm-2 col-form-label">Snap Auth</label>
+                            <div class="col-sm-2">
+                                <input type="text" id="snap-auth" class="form-control" name="snap-auth">
+                            </div>
+                        </div>
+
+                        <div class="mb-3 row">
+                            <label for="snap-id" class="col-sm-2 col-form-label">Snap Id</label>
+                            <div class="col-sm-2">
+                                <input type="text" id="snap-id" class="form-control" name="snap-id">
+                            </div>
+                        </div>
+
+                        <div class="mb-3 row">
+                            <label for="version-check" class="col-sm-2 col-form-label">Version Check</label>
+                            <div class="col-sm-2">
+                                <input type="text" id="version-check" class="form-control" name="versioncheck">
+                            </div>
+                        </div>
+
+                        <div class="mb-3 row">
+                            <label for="slip-no" class="col-sm-2 col-form-label">Slip No</label>
+                            <div class="col-sm-2">
+                                <input type="text" id="slip-no" class="form-control" name="slipno">
+                            </div>
+                        </div>
+
+                        <div class="mb-3 row">
+                            <label for="local-chq-nos" class="col-sm-2 col-form-label">Local Chq Nos</label>
+                            <div class="col-sm-2">
+                                <input type="text" id="local-chq-nos" class="form-control" name="localchqnos">
+                            </div>
+                        </div>
+
+                        <div class="mb-3 row">
+                            <label for="ben-account-1" class="col-sm-2 col-form-label">Ben Account.1</label>
+                            <div class="col-sm-2">
+                                <input type="text" id="ben-account-1" class="form-control" name="benaccount1">
+                            </div>
+                        </div>
+
+                        <div class="mb-3 row">
+                            <label for="ben-amount-1" class="col-sm-2 col-form-label">Ben Amount.1</label>
+                            <div class="col-sm-2">
+                                <input type="text" id="ben-amount-1" class="form-control" name="benamount1">
+                            </div>
+                        </div>
+
+                        <div class="mb-3 row">
+                            <label for="benef-name-1" class="col-sm-2 col-form-label">Benef Name.1</label>
+                            <div class="col-sm-2">
+                                <input type="text" id="benef-name-1" class="form-control" name="benefname1">
+                            </div>
+                        </div>
+
+                        <div class="mb-3 row">
+                            <label for="appl-version" class="col-sm-2 col-form-label">Appl Version</label>
+                            <div class="col-sm-2">
+                                <input type="text" id="appl-version" class="form-control" name="appl-version">
+                            </div>
+                        </div>
+
+                        <div class="mb-3 row">
+                            <label for="narration" class="col-sm-2 col-form-label">Narration</label>
+                            <div class="col-sm-2">
+                                <input type="text" id="narration" class="form-control" name="narration">
+                            </div>
+                        </div>
+
+                        <div class="mb-3 row">
+                            <label for="trans-cur" class="col-sm-2 col-form-label">Trans Cur</label>
+                            <div class="col-sm-2">
+                                <input type="text" id="trans-cur" class="form-control" name="transcur">
+                            </div>
+                        </div>
+
+                        <div class="mb-3 row">
+                            <label for="trade-date" class="col-sm-2 col-form-label">Trade Date</label>
+                            <div class="col-sm-2">
+                                <input type="text" id="trade-date" class="form-control" name="tradedate">
+                            </div>
+                        </div>
+
+
+                        <div class="mb-3 row">
+                            <label for="exchange-rate" class="col-sm-2 col-form-label">Exchange Rate</label>
+                            <div class="col-sm-2">
+                                <input type="text" id="exchange-rate" class="form-control" name="exchangerate">
+                            </div>
+                        </div>
+
+                        <div class="mb-3 row">
+                            <label for="deb-their-ref" class="col-sm-2 col-form-label">Deb Their Ref</label>
+                            <div class="col-sm-2">
+                                <input type="text" id="deb-their-ref" class="form-control" name="debtheirref">
+                            </div>
+                        </div>
+
+                        <div class="mb-3 row">
+                            <label for="cred-their-ref" class="col-sm-2 col-form-label">Cred Their Ref</label>
+                            <div class="col-sm-2">
+                                <input type="text" id="cred-their-ref" class="form-control" name="credtheirref">
+                            </div>
+                        </div>
+
+                        <div class="mb-3 row">
+                            <label for="currency-local" class="col-sm-2 col-form-label">Currency Local</label>
+                            <div class="col-sm-2">
+                                <input type="text" id="currency-local" class="form-control" name="currencylocal">
+                            </div>
+                        </div>
+
+
+                        <div class="mb-3 row">
+                            <label for="amount-lcy" class="col-sm-2 col-form-label">Amount Lcy</label>
+                            <div class="col-sm-2">
+                                <input type="text" id="Amount Lcy" class="form-control" name="amount-lcy">
+                            </div>
+                        </div>
+
+                        <div class="mb-3 row">
+                            <label for="rel-ref" class="col-sm-2 col-form-label">Rel Ref</label>
+                            <div class="col-sm-2">
+                                <input type="text" id="rel-ref" class="form-control" name="relref">
+                            </div>
+                        </div>
+
+                        <div class="mb-3 row">
+                            <label for="amount-fcy" class="col-sm-2 col-form-label">Amount Fcy</label>
+                            <div class="col-sm-2">
+                                <input type="text" id="amount-fcy" class="form-control" name="amountfcy">
+                            </div>
+                        </div>
+
+                        <div class="mb-3 row">
+                            <label for="ft-version" class="col-sm-2 col-form-label">Ft Version</label>
+                            <div class="col-sm-2">
+                                <input type="text" id="ft-version" class="form-control" name="ftversion">
+                            </div>
+                        </div>
+
+                        <div class="mb-3 row">
+                            <label for="msg-priority" class="col-sm-2 col-form-label">Msg Priority</label>
+                            <div class="col-sm-2">
+                                <input type="text" id="msg-priority" class="form-control" name="msgpriority">
+                            </div>
+                        </div>
+
+                        <div class="mb-3 row">
+                            <label for="rtgs-res-bypass" class="col-sm-2 col-form-label">Rtgs Res Bypass</label>
+                            <div class="col-sm-2">
+                                <input type="text" id="rtgs-res-bypass" class="form-control" name="rtgsresbypass">
+                            </div>
+                        </div>
+
+                        <div class="mb-3 row">
+                            <label for="rtgs-res-bypass" class="col-sm-2 col-form-label">Rtgs Res Bypass</label>
+                            <div class="col-sm-2">
+                                <input type="text" id="rtgs-res-bypass" class="form-control" name="rtgs-res-bypass">
+                            </div>
+                        </div>
+                        <!--  Radio-->
+
+                        <div class="form-check-inline">
+                            <label>Cr Dr Marker</label>
+                            <label><input type="radio" name="crdrmarker" value="none" checked> [None]</label>
+                            <label><input type="radio" name="crdrmarker" value="c"> C</label>
+                            <label><input type="radio" name="crdrmarker" value="d"> D</label>
+                        </div>
+
+                        <div class="mb-3 row">
+                            <label for="ben-details" class="col-sm-2 col-form-label">Ben Details</label>
+                            <div class="col-sm-2">
+                                <input type="text" id="ben-details" class="form-control" name="bendetails">
+                            </div>
+                        </div>
+
+                        <div class="mb-3 row">
+                            <label for="benef-amount" class="col-sm-2 col-form-label">Benef Amount</label>
+                            <div class="col-sm-2">
+                                <input type="text" id="benef-amount" class="form-control" name="benefamount">
+                            </div>
+                        </div>
+
+                        <div class="mb-3 row">
+                            <label for="remittance-info1" class="col-sm-2 col-form-label">Remittance Info1</label>
+                            <div class="col-sm-2">
+                                <input type="text" id="remittance-info1" class="form-control" name="remittanceinfo1">
+                            </div>
+                        </div>
+
+                        <div class="mb-3 row">
+                            <label for="trans-code" class="col-sm-2 col-form-label">Trans Code</label>
+                            <div class="col-sm-2">
+                                <input type="text" id="trans-code" class="form-control" name="transcode">
+                            </div>
+                        </div>
+
+                        <div class="mb-3 row">
+                            <label for="event-code" class="col-sm-2 col-form-label">Event Code</label>
+                            <div class="col-sm-2">
+                                <input type="text" id="event-code" class="form-control" name="eventcode">
+                            </div>
+                        </div>
+
+                        <div class="mb-3 row">
+                            <label for="drp-table" class="col-sm-2 col-form-label">Drp Table</label>
+                            <div class="col-sm-2">
+                                <input type="text" id="drp-table" class="form-control" name="drptable">
+                            </div>
+                        </div>
+
+                        <div class="mb-3 row">
+                            <label for="ben-customer1" class="col-sm-2 col-form-label">Ben Customer1</label>
+                            <div class="col-sm-2">
+                                <input type="text" id="ben-customer1" class="form-control" name="bencustomer1">
+                            </div>
+                        </div>
+
+                        <div class="mb-3 row">
+                            <label for="ben-customer2" class="col-sm-2 col-form-label">Ben Customer2</label>
+                            <div class="col-sm-2">
+                                <input type="text" id="ben-customer2" class="form-control" name="bencustomer2">
+                            </div>
+                        </div>
+
+                        <div class="mb-3 row">
+                            <label for="ben-customer3" class="col-sm-2 col-form-label">Ben Customer3</label>
+                            <div class="col-sm-2">
+                                <input type="text" id="ben-customer3" class="form-control" name="bencustomer3">
+                            </div>
+                        </div>
+
+                        <div class="mb-3 row">
+                            <label for="ben-customer4" class="col-sm-2 col-form-label">Ben Customer4</label>
+                            <div class="col-sm-2">
+                                <input type="text" id="ben-customer4" class="form-control" name="bencustomer4">
+                            </div>
+                        </div>
+
+                        <div class="mb-3 row">
+                            <label for="ben-customer4" class="col-sm-2 col-form-label">Ben Customer4</label>
+                            <div class="col-sm-2">
+                                <input type="text" id="ben-customer4" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="mb-3 row">
+                            <label for="rtgs-msg-type" class="col-sm-2 col-form-label">Rtgs Msg Type</label>
+                            <div class="col-sm-2">
+                                <input type="text" id="rtgs-msg-type" class="form-control" name="rtgs-msg-type">
+                            </div>
+                        </div>
+
+                        <div class="mb-3 row">
+                            <label for="rtgs-id" class="col-sm-2 col-form-label">Rtgs Id</label>
+                            <div class="col-sm-2">
+                                <input type="text" id="rtgs-id" class="form-control" name="rtgs-id">
+                            </div>
+                        </div>
+
+                        <div class="mb-3 row">
+                            <label for="rtgs-ofs-status" class="col-sm-2 col-form-label">Rtgs Ofs Status</label>
+                            <div class="col-sm-2">
+                                <input type="text" id="rtgs-ofs-status" class="form-control" name="rtgsofsstatus">
+                            </div>
+                        </div>
+
+                        <div class="mb-3 row">
+                            <label for="benef-acct" class="col-sm-2 col-form-label">Benef Acct</label>
+                            <div class="col-sm-2">
+                                <input type="text" id="benef-acct" class="form-control" name="benefacct">
+                            </div>
+                        </div>
+
+                        <div class="mb-3 row">
+                            <label for="alt-debit" class="col-sm-2 col-form-label">Alt Debit</label>
+                            <div class="col-sm-2">
+                                <input type="text" id="alt-debit" class="form-control" name="altdebit">
+                            </div>
+                        </div>
+
+                        <div class="mb-3 row">
+                            <label for="participant-bic" class="col-sm-2 col-form-label">Participant Bic</label>
+                            <div class="col-sm-2">
+                                <input type="text" id="participant-bic" class="form-control" name="participantbic">
+                            </div>
+                        </div>
+
+                        <div class="mb-3 row">
+                            <label for="participantb" class="col-sm-2 col-form-label">Participantb</label>
+                            <div class="col-sm-2">
+                                <input type="text" id="participantb" class="form-control" name="participantb">
+                            </div>
+                        </div>
+
+                        <div class="mb-3 row">
+                            <label for="alt-credit" class="col-sm-2 col-form-label">Alt Credit</label>
+                            <div class="col-sm-2">
+                                <input type="text" id="alt-credit" class="form-control" name="altcredit">
+                            </div>
+                        </div>
+
+                        <div class="mb-3 row">
+                            <label for="iso-rrn" class="col-sm-2 col-form-label">Iso Rrn</label>
+                            <div class="col-sm-2">
+                                <input type="text" id="iso-rrn" class="form-control" name="isorrn">
+                            </div>
+                        </div>
+
+                        <div class="mb-3 row">
+                            <label for="iso-location" class="col-sm-2 col-form-label">Iso Location</label>
+                            <div class="col-sm-2">
+                                <input type="text" id="iso-location" class="form-control" name="isolocation">
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="tab-content">
+                        <div class="tab-pane fade show active" id="content-audit" role="tabpanel"
+                            aria-labelledby="tab-audit">
+
+
+                            <div class="mb-3 row">
+                                <label for="overrcharge-commissione"
+                                    class="col-sm-2 col-form-label">Overrcharge-commissione.1</label>
+                                <div class="col-sm-2">
+                                    <input type="text" id="overrcharge-commissione" class="form-control"
+                                        name="overrcharge-commissione">
+                                </div>
+                            </div>
+
+                            <div class="mb-3 row">
+                                <label for="record-status" class="col-sm-2 col-form-label">Record Status</label>
+                                <div class="col-sm-2">
+                                    <input type="text" id="record-status" class="form-control" name="recordstatus">
+                                </div>
+                            </div>
+
+                            <div class="mb-3 row">
+                                <label for="curr-number" class="col-sm-2 col-form-label">Curr Number</label>
+                                <div class="col-sm-2">
+                                    <input type="text" id="curr-number" class="form-control" name="currnumber">
+                                </div>
+                            </div>
+
+                            <div class="mb-3 row">
+                                <label for="inputter-charge-commission" class="col-sm-2 col-form-label">Curr
+                                    Number</label>
+                                <div class="col-sm-2">
+                                    <input type="text" id="inputter-charge-commission" class="form-control"
+                                        name="inputter-charge-commission">
+                                </div>
+                            </div>
+
+                            <div class="mb-3 row">
+                                <label for="date-time" class="col-sm-2 col-form-label">Date & Time.1</label>
+                                <div class="col-sm-2">
+                                    <input type="text" id="date-time" class="form-control" name="date-time">
+                                </div>
+                            </div>
+
+                            <div class="mb-3 row">
+                                <label for="authoriser" class="col-sm-2 col-form-label">Authoriser</label>
+                                <div class="col-sm-2">
+                                    <input type="text" id="authoriser" class="form-control" name="authoriser">
+                                </div>
+                            </div>
+
+
+                            <div class="mb-3 row">
+                                <label for="company-code" class="col-sm-2 col-form-label">Company Code</label>
+                                <div class="col-sm-2">
+                                    <input type="text" id="company-code" class="form-control" name="companycode">
+                                </div>
+                            </div>
+
+                            <div class="mb-3 row">
+                                <label for="department-code" class="col-sm-2 col-form-label">Department Code</label>
+                                <div class="col-sm-2">
+                                    <input type="text" id="department-code" class="form-control" name="departmentcode">
+                                </div>
+                            </div>
+
+                            <div class="mb-3 row">
+                                <label for="auditor-charge-commission" class="col-sm-2 col-form-label">Auditor
+                                    charge-commission</label>
+                                <div class="col-sm-2">
+                                    <input type="text" id="auditor-charge-commission" class="form-control"
+                                        name="auditor-charge-commission">
+                                </div>
+                            </div>
+
+                            <div class="mb-3 row">
+                                <label for="audit-date-time" class="col-sm-2 col-form-label">Auditor
+                                    charge-commission</label>
+                                <div class="col-sm-2">
+                                    <input type="text" id="audit-date-time" class="form-control" name="audit-date-time">
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+
+
+
+
+
+
+
+                </div>
+
+            </div>
+        </form>
+    </div>
+
+
+
+
+
+
+
+
+
+    <!-- Submit Button -->
+    <div class="text-center mt-4">
+        <button type="submit" class="btn btn-primary">Submit For Authorization</button>
+    </div>
+
+
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

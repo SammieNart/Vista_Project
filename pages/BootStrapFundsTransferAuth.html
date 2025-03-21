@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OutwardRemittance</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css">
+    <style>
+        body {
+
+            background-color: ;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <nav class=" navbar navbar-expand-lg navbar-light " style="background-color: #f96882;">
+        <a href="#" class="navbar-brand mb-0 h1">
+            <img src="C:\xampp\htdocs\VistaBank_Screens\assets\vista-logo.png" class="logo-top1" width="50" height="50">
+            <span class="navbar-brand p-3 h1 text-white "><b>Vista Bank</b></span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+
+        </div>
+
+    </nav>
+
+    <div class=".container-fluid sm">
+        <form>
+            <div class="row g-3">
+                <h2 class="mb-4">FundsTransfer Authorization</h2>
+
+                <ul class="nav nav-tabs" id="horizontalTabs" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="tab-ftauth" data-bs-toggle="tab"
+                            data-bs-target="#content-ftauth" type="button" role="tab" aria-controls="content-ftauth"
+                            aria-selected="true">FundsTransfer Auth</button>
+                    </li>
+
+                </ul>
+
+                <div class="tab-content">
+
+                    <div class="tab-pane fade show active" id="content-outwardremittance" role="tabpanel"
+                        aria-labelledby="tab-ftauth">
+                        <div class="row">
+                            <!-- Outward Clearing Tab -->
+                            <div id="ftauth" class="tab-pane fade show active">
+                                <div class="mb-3 row">
+                                    <label for="debit-account" class="col-sm-2 col-form-label">Debit Account</label>
+                                    <div class="col-sm-5">
+                                        <select id="debit-account" name="debit-account" class="form-control">
+                                            <option></option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="mb-3 row">
+                                    <label for="debit-bban" class="col-sm-2 col-form-label">Debit Bban</label>
+                                    <div class="col-sm-5">
+                                        <input type="text" id="debit-bban" name="debit-bban" class="form-control">
+                                    </div>
+                                </div>
+
+                                <div class="mb-3 row">
+                                    <label for="debit-currency" class="col-sm-2 col-form-label">Debit Currency</label>
+                                    <div class="col-sm-5">
+                                        <select id="debit-currency" name="debit-currency" class="form-control">
+                                            <option value="usd">USD</option>
+                                            <option value="eur">EUR</option>
+                                            <option value="ghs">GHS</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="mb-3 row">
+                                    <label for="debit-amount" class="col-sm-2 col-form-label">Debit Amount</label>
+                                    <div class="col-sm-5">
+                                        <input type="text" id="debit-amount" name="debit-amount" class="form-control">
+                                    </div>
+                                </div>
+
+                                <div class="mb-3 row">
+                                    <label for="debit-value-date" class="col-sm-2 col-form-label">Debit Value
+                                        Date</label>
+                                    <div class="col-sm-5">
+                                        <input type="date" id="debit-value-date" name="debit-value-date"
+                                            class="form-control">
+                                    </div>
+                                </div>
+
+                                <div class="mb-3 row">
+                                    <label for="debit-ref" class="col-sm-2 col-form-label">Debit Ref.</label>
+                                    <div class="col-sm-5">
+                                        <input type="text" id="debit-ref" name="debit-ref" class="form-control">
+                                    </div>
+                                </div>
+
+                                <!-- Credit Account Information -->
+                                <div class="mb-3 row">
+                                    <label for="credit-ref" class="col-sm-2 col-form-label">Credit Ref.</label>
+                                    <div class="col-sm-5">
+                                        <input type="text" id="credit-ref" name="credit-ref" class="form-control">
+                                    </div>
+                                </div>
+
+                                <div class="mb-3 row">
+                                    <label for="credit-account" class="col-sm-2 col-form-label">Credit Account</label>
+                                    <div class="col-sm-5">
+                                        <input type="text" id="credit-account" name="credit-account"
+                                            class="form-control">
+                                    </div>
+                                </div>
+
+                                <div class="mb-3 row">
+                                    <label for="credit-bban" class="col-sm-2 col-form-label">Credit Bban</label>
+                                    <div class="col-sm-5">
+                                        <input type="text" id="credit-bban" name="credit-bban" class="form-control">
+                                    </div>
+                                </div>
+
+                                <div class="mb-3 row">
+                                    <label for="credit-currency" class="col-sm-2 col-form-label">Credit Currency</label>
+                                    <div class="col-sm-5">
+                                        <select id="credit-currency" name="credit-currency" class="form-control">
+                                            <option value="usd">USD</option>
+                                            <option value="eur">EUR</option>
+                                            <option value="ghs">GHS</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="mb-3 row">
+                                    <label for="credit-amount" class="col-sm-2 col-form-label">Credit Amount</label>
+                                    <div class="col-sm-5">
+                                        <input type="text" id="credit-amount" name="credit-amount" class="form-control">
+                                    </div>
+                                </div>
+
+                                <div class="mb-3 row">
+                                    <label for="credit-value-date" class="col-sm-2 col-form-label">Credit Value
+                                        Date</label>
+                                    <div class="col-sm-5">
+                                        <input type="date" id="credit-value-date" name="credit-value-date"
+                                            class="form-control">
+                                    </div>
+                                </div>
+
+                                <!-- Additional Fields -->
+                                <div class="mb-3 row">
+                                    <label for="ordering-customer" class="col-sm-2 col-form-label">Ordering
+                                        Customer</label>
+                                    <div class="col-sm-5">
+                                        <input type="text" id="ordering-customer" name="ordering-customer"
+                                            class="form-control">
+                                    </div>
+                                </div>
+
+                                <div class="mb-3 row">
+                                    <label for="ordering-bank" class="col-sm-2 col-form-label">Ordering Bank</label>
+                                    <div class="col-sm-5">
+                                        <input type="text" id="ordering-bank" name="ordering-bank" class="form-control">
+                                    </div>
+                                </div>
+
+                                <div class="mb-3 row">
+                                    <label for="ben-acct-no" class="col-sm-2 col-form-label">Beneficiary Account
+                                        No.</label>
+                                    <div class="col-sm-5">
+                                        <input type="text" id="ben-acct-no" name="ben-acct-no" class="form-control">
+                                    </div>
+                                </div>
+
+                                <div class="mb-3 row">
+                                    <label for="ben-customer" class="col-sm-2 col-form-label">Beneficiary
+                                        Customer</label>
+                                    <div class="col-sm-5">
+                                        <input type="text" id="ben-customer" name="ben-customer" class="form-control">
+                                    </div>
+                                </div>
+
+                                <!-- Radio Buttons Example -->
+                                <div class="mb-3 row">
+                                    <label class="col-sm-2 col-form-label">Ben Our Charges</label>
+                                    <div class="col-sm-5">
+                                        <div class="form-check form-check-inline">
+                                            <input type="radio" id="none" name="ben-our-charges" value="None"
+                                                class="form-check-input">
+                                            <label for="none" class="form-check-label">None</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input type="radio" id="ben" name="ben-our-charges" value="Ben"
+                                                class="form-check-input">
+                                            <label for="ben" class="form-check-label">Ben</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input type="radio" id="our" name="ben-our-charges" value="Our"
+                                                class="form-check-input">
+                                            <label for="our" class="form-check-label">Our</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input type="radio" id="sha" name="ben-our-charges" value="Sha"
+                                                class="form-check-input">
+                                            <label for="sha" class="form-check-label">Sha</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Submit Button -->
+                                <div class="mb-3 row">
+                                    <div class="col-sm-5 offset-sm-2">
+                                        <button type="submit" class="btn btn-primary">Submit</button>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                            <!-- Audit Tab -->
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </form>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
